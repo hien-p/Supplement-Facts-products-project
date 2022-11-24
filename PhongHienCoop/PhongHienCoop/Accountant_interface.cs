@@ -70,10 +70,15 @@ namespace PhongHienCoop
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-
+            public int NumAgents { get; private set: }
         }
 
         private void Numberoforders_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }

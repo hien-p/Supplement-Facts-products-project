@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,7 @@
     <Compile Include="Accountant_interface.Designer.cs">
       <DependentUpon>Accountant_interface.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dbconnection .cs" />
     <Compile Include="Products.cs">
       <SubType>Form</SubType>
     </Compile>
