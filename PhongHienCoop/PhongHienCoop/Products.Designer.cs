@@ -1,6 +1,6 @@
 ﻿namespace PhongHienCoop
 {
-    partial class Accountant_interface
+    partial class Products
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Accountant_interface
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label1.Location = new System.Drawing.Point(352, 200);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 56);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Will design there";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(933, 574);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Accountant_interface";
-            this.Text = "Accountant_interface";
-            this.Load += new System.EventHandler(this.Accountant_interface_Load);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Name = "Products";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Products_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

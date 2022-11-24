@@ -10,3 +10,13 @@ D:\FinalSE\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.pdb
 D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.exe
 D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.pdb
 D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.Accountant_interface.resources
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.AssemblyReference.cache
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.SuggestedBindingRedirects.cache
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.Accountant_interface.resources
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.LoginForm.resources
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.Products.resources
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.Properties.Resources.resources
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.GenerateResource.cache
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.CoreCompileInputs.cache
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.exe
+E:\demo\main\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.pdb

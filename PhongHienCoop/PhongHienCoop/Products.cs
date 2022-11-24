@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace PhongHienCoop
 {
-    public partial class Accountant_interface : Form
+    public partial class Products : Form
     {
-        public Accountant_interface()
+        public Products()
         {
             InitializeComponent();
-            this.IsMdiContainer = true;
         }
 
-        private void Accountant_interface_Load(object sender, EventArgs e)
+        private void Products_Load(object sender, EventArgs e)
         {
-            
+
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-
-        
+        }
     }
 }
