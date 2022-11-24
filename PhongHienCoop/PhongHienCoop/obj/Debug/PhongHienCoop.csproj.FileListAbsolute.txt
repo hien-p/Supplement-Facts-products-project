@@ -1,0 +1,12 @@
+D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.AssemblyReference.cache
+D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.SuggestedBindingRedirects.cache
+D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.LoginForm.resources
+D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.Properties.Resources.resources
+D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.GenerateResource.cache
+D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.CoreCompileInputs.cache
+D:\FinalSE\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.exe.config
+D:\FinalSE\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.exe
+D:\FinalSE\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.pdb
+D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.exe
+D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.pdb
+D:\FinalSE\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.Accountant_interface.resources
