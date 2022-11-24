@@ -20,12 +20,52 @@ namespace PhongHienCoop
 
         private void Accountant_interface_Load(object sender, EventArgs e)
         {
+           
+        }
+
+        private void ToolStripMenuItemInventory_Click(object sender, EventArgs e)
+        {
             
         }
 
-       
+        private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
 
-        
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PaneBoard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
