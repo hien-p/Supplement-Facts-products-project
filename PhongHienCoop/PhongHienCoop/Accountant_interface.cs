@@ -67,5 +67,15 @@ namespace PhongHienCoop
         {
 
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Numberoforders_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
