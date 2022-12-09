@@ -8,7 +8,7 @@ namespace PhongHienCoop
 {
     public abstract class Dbconnection
     {
-        private 
+        
 
     }
 }

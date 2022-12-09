@@ -12,10 +12,11 @@ namespace PhongHienCoop
 {
     public partial class Accountant_interface : Form
     {
-        public Accountant_interface()
+        public Accountant_interface(String admin)
         {
             InitializeComponent();
-            this.IsMdiContainer = true;
+            this.IsMdiContainer = true; 
+            this.username = admin;
         }
 
         private void Accountant_interface_Load(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace PhongHienCoop
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-            public int NumAgents { get; private set: }
+           // public int NumAgents { get; private set: }
         }
 
         private void Numberoforders_Click(object sender, EventArgs e)
@@ -79,6 +80,11 @@ namespace PhongHienCoop
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
