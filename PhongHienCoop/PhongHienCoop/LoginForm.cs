@@ -86,8 +86,6 @@ namespace PhongHienCoop
                 Accountant_interface acc = new Accountant_interface(account);
                 acc.ShowDialog();
 
-                // Products pro = new Products();
-                //pro.ShowDialog();
             }
             else
             {

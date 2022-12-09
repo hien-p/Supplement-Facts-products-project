@@ -34,7 +34,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label1.Location = new System.Drawing.Point(352, 200);
+            this.label1.Location = new System.Drawing.Point(296, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 56);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Name = "Products";
-            this.Text = "Form1";
+            this.Text = "Warehouse ";
             this.Load += new System.EventHandler(this.Products_Load);
             this.ResumeLayout(false);
 
