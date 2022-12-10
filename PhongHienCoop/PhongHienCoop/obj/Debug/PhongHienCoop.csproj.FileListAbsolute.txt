@@ -71,4 +71,5 @@ E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\
 E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.CopyComplete
 E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.exe
 E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.pdb
-E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_invoice.resources
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_delivery.resources
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_receipts.resources

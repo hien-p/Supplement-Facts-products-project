@@ -13,8 +13,8 @@ namespace PhongHienCoop.models
         private DateTime startDate;
         private DateTime endDate;
 
-        public int TotalProfit { get; set; }
-        public int TotalRevenue { get; set; }
+        public long TotalProfit { get; set; }
+        public long TotalRevenue { get; set; }
 
         public int Numberoforders { get; set; }
 
@@ -67,8 +67,7 @@ namespace PhongHienCoop.models
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = @"select agent_id, sum(price) 
-                                            from [Orders] group by agent_id";
+                    command.CommandText = @"select product_id, SUM(CAST(price AS BIGINT)) * SUM(CAST(quantity AS BIGINT)) as revenue from [Orders] group by product_id order by product_id desc";
 
                     var reader = command.ExecuteReader();
 
@@ -76,7 +75,7 @@ namespace PhongHienCoop.models
                     {
                         while (reader.Read())
                         {
-                            TotalRevenue += (int)reader[1];
+                            TotalRevenue += (long)reader[1];
                         }
 
                     }

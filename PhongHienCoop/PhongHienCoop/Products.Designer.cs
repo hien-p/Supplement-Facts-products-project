@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_delivery = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
             this.button_edit = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.button_delivery);
             this.tabPage1.Controls.Add(this.button_delete);
             this.tabPage1.Controls.Add(this.button_edit);
             this.tabPage1.Controls.Add(this.add_button);
@@ -65,14 +65,14 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // button1
+            // button_delivery
             // 
-            this.button1.Location = new System.Drawing.Point(701, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 46);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_delivery.Location = new System.Drawing.Point(710, 279);
+            this.button_delivery.Name = "button_delivery";
+            this.button_delivery.Size = new System.Drawing.Size(87, 33);
+            this.button_delivery.TabIndex = 10;
+            this.button_delivery.Text = "Delivery Note";
+            this.button_delivery.UseVisualStyleBackColor = true;
             // 
             // button_delete
             // 
@@ -218,7 +218,7 @@
         private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button_edit;
         private System.Windows.Forms.Button add_button;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_delivery;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_to_dashboard;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

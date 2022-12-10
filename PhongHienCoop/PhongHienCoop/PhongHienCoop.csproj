@@ -56,11 +56,17 @@
     <Compile Include="Accountant_interface.Designer.cs">
       <DependentUpon>Accountant_interface.cs</DependentUpon>
     </Compile>
-    <Compile Include="create_invoice.cs">
+    <Compile Include="create_delivery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="create_invoice.Designer.cs">
-      <DependentUpon>create_invoice.cs</DependentUpon>
+    <Compile Include="create_delivery.Designer.cs">
+      <DependentUpon>create_delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_receipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_receipts.Designer.cs">
+      <DependentUpon>create_receipts.cs</DependentUpon>
     </Compile>
     <Compile Include="Dbconnection .cs" />
     <Compile Include="db\dbConnection.cs" />
@@ -83,8 +89,11 @@
     <EmbeddedResource Include="Accountant_interface.resx">
       <DependentUpon>Accountant_interface.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="create_invoice.resx">
-      <DependentUpon>create_invoice.cs</DependentUpon>
+    <EmbeddedResource Include="create_delivery.resx">
+      <DependentUpon>create_delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_receipts.resx">
+      <DependentUpon>create_receipts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

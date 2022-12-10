@@ -1,6 +1,6 @@
 ﻿namespace PhongHienCoop
 {
-    partial class create_invoice
+    partial class create_receipts
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel_tab = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Recieved_Note = new System.Windows.Forms.Label();
             this.input_date = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.panel_tab.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,26 @@
             this.panel_tab.Name = "panel_tab";
             this.panel_tab.Size = new System.Drawing.Size(801, 48);
             this.panel_tab.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(599, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(139, 25);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Back to Dashboard";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(461, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 25);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Product list";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Recieved_Note
             // 
@@ -68,42 +88,28 @@
             this.input_date.TabIndex = 1;
             this.input_date.Text = "Input date:";
             // 
-            // dateTimePicker1
+            // dateTime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(137, 80);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dateTime.CustomFormat = "MMMM dd, yyy";
+            this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dateTime.Location = new System.Drawing.Point(137, 80);
+            this.dateTime.MinDate = new System.DateTime(2022, 12, 11, 0, 0, 0, 0);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.Size = new System.Drawing.Size(200, 20);
+            this.dateTime.TabIndex = 2;
+            this.dateTime.Value = new System.DateTime(2022, 12, 11, 0, 0, 0, 0);
+            this.dateTime.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(461, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 25);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Product list";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(599, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 25);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Back to Dashboard";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // create_invoice
+            // create_receipts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 477);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTime);
             this.Controls.Add(this.input_date);
             this.Controls.Add(this.panel_tab);
-            this.Name = "create_invoice";
+            this.Name = "create_receipts";
             this.Load += new System.EventHandler(this.create_invoice_Load);
             this.panel_tab.ResumeLayout(false);
             this.panel_tab.PerformLayout();
@@ -117,7 +123,7 @@
         private System.Windows.Forms.Panel panel_tab;
         private System.Windows.Forms.Label Recieved_Note;
         private System.Windows.Forms.Label input_date;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTime;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
     }

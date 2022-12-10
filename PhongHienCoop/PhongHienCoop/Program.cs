@@ -18,10 +18,10 @@ namespace PhongHienCoop
             Application.SetCompatibleTextRenderingDefault(false);
 
             LoginForm login = new LoginForm();
-            //Application.Run(new Accountant_interface("Hien"));
-            Application.Run(new Products());
-
-           
+            Application.Run(new Accountant_interface("Hien"));
+            //Application.Run(new Products());
+            //Application.Run(new LoginForm());
+            
         }
     }
 }

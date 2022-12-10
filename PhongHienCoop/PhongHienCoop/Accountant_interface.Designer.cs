@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.l = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,6 +45,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.name_user = new System.Windows.Forms.Panel();
+            this.button_sign_out = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.user_name = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -156,6 +158,9 @@
             // 
             // name_user
             // 
+            this.name_user.BackColor = System.Drawing.Color.AliceBlue;
+            this.name_user.Controls.Add(this.button_sign_out);
+            this.name_user.Controls.Add(this.button1);
             this.name_user.Controls.Add(this.user_name);
             this.name_user.Controls.Add(this.label7);
             this.name_user.Controls.Add(this.label6);
@@ -167,11 +172,36 @@
             this.name_user.TabIndex = 0;
             this.name_user.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // button_sign_out
+            // 
+            this.button_sign_out.BackColor = System.Drawing.SystemColors.Window;
+            this.button_sign_out.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button_sign_out.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.button_sign_out.Location = new System.Drawing.Point(803, 3);
+            this.button_sign_out.Name = "button_sign_out";
+            this.button_sign_out.Size = new System.Drawing.Size(82, 31);
+            this.button_sign_out.TabIndex = 6;
+            this.button_sign_out.Text = "sign out ";
+            this.button_sign_out.UseVisualStyleBackColor = false;
+            this.button_sign_out.Click += new System.EventHandler(this.button_sign_out_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.button1.Location = new System.Drawing.Point(600, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 31);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Product overviews";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // user_name
             // 
             this.user_name.AutoSize = true;
             this.user_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.user_name.Location = new System.Drawing.Point(384, 12);
+            this.user_name.Location = new System.Drawing.Point(316, 16);
             this.user_name.Name = "user_name";
             this.user_name.Size = new System.Drawing.Size(51, 24);
             this.user_name.TabIndex = 4;
@@ -184,11 +214,11 @@
             this.label7.BackColor = System.Drawing.SystemColors.Window;
             this.label7.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(206, 12);
+            this.label7.Location = new System.Drawing.Point(206, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 25);
+            this.label7.Size = new System.Drawing.Size(122, 25);
             this.label7.TabIndex = 1;
-            this.label7.Text = "Welcome again, ";
+            this.label7.Text = "Welcome, ";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
@@ -216,68 +246,69 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.BackColor = System.Drawing.Color.Tomato;
             this.panel4.Controls.Add(this.chart2);
             this.panel4.Controls.Add(this.chart1);
             this.panel4.Controls.Add(this.Numberofprofits);
             this.panel4.Controls.Add(this.NumberofRevenue);
             this.panel4.Controls.Add(this.NumberOfoerder);
-            this.panel4.Location = new System.Drawing.Point(26, 40);
+            this.panel4.Location = new System.Drawing.Point(26, 43);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(859, 474);
+            this.panel4.Size = new System.Drawing.Size(859, 471);
             this.panel4.TabIndex = 0;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // chart2
             // 
             this.chart2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
             this.chart2.Location = new System.Drawing.Point(508, 139);
             this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.IsValueShownAsLabel = true;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart2.Series.Add(series3);
             this.chart2.Size = new System.Drawing.Size(331, 300);
             this.chart2.TabIndex = 2;
             this.chart2.Text = "chart2";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "Top Product";
-            this.chart2.Titles.Add(title1);
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Title1";
+            title3.Text = "Top Product";
+            this.chart2.Titles.Add(title3);
             this.chart2.Click += new System.EventHandler(this.chart2_Click);
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(41, 139);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(461, 300);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "Gross Revenue ";
-            this.chart1.Titles.Add(title2);
+            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "Gross Revenue ";
+            this.chart1.Titles.Add(title4);
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // Numberofprofits
             // 
+            this.Numberofprofits.BackColor = System.Drawing.Color.Snow;
             this.Numberofprofits.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Numberofprofits.Controls.Add(this.label9);
             this.Numberofprofits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
@@ -292,7 +323,7 @@
             this.label9.AutoSize = true;
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(29, 12);
+            this.label9.Location = new System.Drawing.Point(112, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 19);
             this.label9.TabIndex = 2;
@@ -301,6 +332,7 @@
             // 
             // NumberofRevenue
             // 
+            this.NumberofRevenue.BackColor = System.Drawing.Color.Snow;
             this.NumberofRevenue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.NumberofRevenue.Controls.Add(this.label8);
             this.NumberofRevenue.Cursor = System.Windows.Forms.Cursors.Default;
@@ -317,21 +349,23 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.Cursor = System.Windows.Forms.Cursors.Help;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 12);
+            this.label8.Location = new System.Drawing.Point(64, 12);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(137, 19);
             this.label8.TabIndex = 1;
             this.label8.Text = "Number of Revenue";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // NumberOfoerder
             // 
             this.NumberOfoerder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.NumberOfoerder.AutoScrollMargin = new System.Drawing.Size(500, 500);
+            this.NumberOfoerder.BackColor = System.Drawing.Color.Snow;
             this.NumberOfoerder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.NumberOfoerder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.NumberOfoerder.Controls.Add(this.Numberoforders);
             this.NumberOfoerder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(4)));
-            this.NumberOfoerder.Location = new System.Drawing.Point(41, 34);
+            this.NumberOfoerder.Location = new System.Drawing.Point(41, 31);
             this.NumberOfoerder.Name = "NumberOfoerder";
             this.NumberOfoerder.Padding = new System.Windows.Forms.Padding(0, 0, 100, 0);
             this.NumberOfoerder.Size = new System.Drawing.Size(172, 71);
@@ -408,5 +442,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label user_name;
+        private System.Windows.Forms.Button button_sign_out;
+        private System.Windows.Forms.Button button1;
     }
 }
