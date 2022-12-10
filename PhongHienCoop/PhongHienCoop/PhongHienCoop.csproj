@@ -56,6 +56,12 @@
     <Compile Include="Accountant_interface.Designer.cs">
       <DependentUpon>Accountant_interface.cs</DependentUpon>
     </Compile>
+    <Compile Include="create_invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_invoice.Designer.cs">
+      <DependentUpon>create_invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dbconnection .cs" />
     <Compile Include="db\dbConnection.cs" />
     <Compile Include="models\Dashboard.cs" />
@@ -76,6 +82,9 @@
     <Compile Include="SQLHelper.cs" />
     <EmbeddedResource Include="Accountant_interface.resx">
       <DependentUpon>Accountant_interface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_invoice.resx">
+      <DependentUpon>create_invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

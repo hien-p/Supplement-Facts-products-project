@@ -10,35 +10,27 @@ using System.Windows.Forms;
 
 namespace PhongHienCoop
 {
-    public partial class Products : Form
+    public partial class create_invoice : Form
     {
-        public Products()
+        public create_invoice()
         {
             InitializeComponent();
         }
 
-        private void Products_Load(object sender, EventArgs e)
+        private void create_invoice_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
 
 
 
 
-        /* static void Main()
+        /* private void label1_Click(object sender, EventArgs e)
          {
-             return;
+
          }*/
     }
 }

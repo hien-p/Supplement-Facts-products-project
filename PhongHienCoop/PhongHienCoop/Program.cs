@@ -19,7 +19,7 @@ namespace PhongHienCoop
 
             LoginForm login = new LoginForm();
             //Application.Run(new Accountant_interface("Hien"));
-            Application.Run(login);
+            Application.Run(new Products());
 
            
         }
