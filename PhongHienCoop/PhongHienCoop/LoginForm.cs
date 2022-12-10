@@ -13,9 +13,12 @@ namespace PhongHienCoop
 {
     public partial class LoginForm : Form
     {
+
+        public string islogin { get; set; }
         public LoginForm()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,6 +50,7 @@ namespace PhongHienCoop
 
             String account = txt_name.Text.Trim();
             String password = txt_password.Text.Trim();
+            bool islogin = false;
             String strErr = String.Empty;
             // test login account length    
             if(account == String.Empty)
@@ -66,26 +70,51 @@ namespace PhongHienCoop
                 return;
             }
 
-            // 
-            string strCon = @"server=VIP-044\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
 
+    
+            string strCon = @"server=VIP-077\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
             SqlParameter[] arrParam = new SqlParameter[2];
 
             arrParam[0] = new SqlParameter("accountant_name", account);
             arrParam[1] = new SqlParameter("acc_password", password);
 
-            // CONNECT DATABASE 
-            SqlDataReader reader = SqlHelper.ExecuteReader(strCon, "USERSYSTEM_CHECKLOGIN", arrParam);
-           
+
+
+
+            // Orders query 
+            var connection = new SqlConnection(strCon);
+            connection.Open();
+            String order_query = "select count(*) as order_id  from Orders";
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = order_query;
+            var rows_affected = cmd.ExecuteReader();
+            if (rows_affected.HasRows)
+            {
+                while (rows_affected.Read())
+                {
+                    var orders = rows_affected.GetInt32(0);
+                   //MessageBox.Show(orders.ToString());
+                }
+            }
+
+                //SqlDataAdapter da = new SqlDataAdapter(cmd);
+                //MessageBox.Show(cmd.va);
+                // CONNECT DATABASE 
+                SqlDataReader reader = SqlHelper.ExecuteReader(strCon, "USERSYSTEM_CHECKLOGIN", arrParam);
+
+
 
             if (reader.Read() == true)
             {
-
+                   
                 MessageBox.Show("Đăng nhập thành công ");
+               
+                //Accountant_interface acc = new Accountant_interface(reader["name"].ToString());
+                //acc.ShowDialog();
                 this.Hide();
-                Accountant_interface acc = new Accountant_interface(account);
-                acc.ShowDialog();
-
+                
             }
             else
             {

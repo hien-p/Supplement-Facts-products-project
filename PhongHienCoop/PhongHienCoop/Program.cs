@@ -16,7 +16,14 @@ namespace PhongHienCoop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+
+            LoginForm login = new LoginForm();
+            //Application.Run(new Accountant_interface("Hien"));
+            Application.Run(login);
+
+            /*if (login.islogin = "1"){
+                Application.Run(new Products());
+            }*/
         }
     }
 }

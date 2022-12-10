@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea23 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend23 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title23 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea24 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend24 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title24 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.l = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,28 +44,29 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.name_user = new System.Windows.Forms.Panel();
+            this.user_name = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.Numberofprofits = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.NumberofRevenue = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.NumberOfoerder = new System.Windows.Forms.Panel();
             this.Numberoforders = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.name_user.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.Numberofprofits.SuspendLayout();
+            this.NumberofRevenue.SuspendLayout();
+            this.NumberOfoerder.SuspendLayout();
             this.SuspendLayout();
             // 
             // l
@@ -153,17 +154,29 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Number of Revenues";
             // 
-            // panel3
+            // name_user
             // 
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(9, 39);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(912, 523);
-            this.panel3.TabIndex = 0;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.name_user.Controls.Add(this.user_name);
+            this.name_user.Controls.Add(this.label7);
+            this.name_user.Controls.Add(this.label6);
+            this.name_user.Controls.Add(this.label5);
+            this.name_user.Controls.Add(this.panel4);
+            this.name_user.Location = new System.Drawing.Point(9, 39);
+            this.name_user.Name = "name_user";
+            this.name_user.Size = new System.Drawing.Size(912, 523);
+            this.name_user.TabIndex = 0;
+            this.name_user.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // user_name
+            // 
+            this.user_name.AutoSize = true;
+            this.user_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.user_name.Location = new System.Drawing.Point(384, 12);
+            this.user_name.Name = "user_name";
+            this.user_name.Size = new System.Drawing.Size(51, 24);
+            this.user_name.TabIndex = 4;
+            this.user_name.Text = "user";
+            this.user_name.Click += new System.EventHandler(this.label10_Click);
             // 
             // label7
             // 
@@ -173,9 +186,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(206, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(273, 25);
+            this.label7.Size = new System.Drawing.Size(187, 25);
             this.label7.TabIndex = 1;
-            this.label7.Text = "Welcome again, {admin} ";
+            this.label7.Text = "Welcome again, ";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
@@ -206,9 +219,9 @@
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.chart2);
             this.panel4.Controls.Add(this.chart1);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.Numberofprofits);
+            this.panel4.Controls.Add(this.NumberofRevenue);
+            this.panel4.Controls.Add(this.NumberOfoerder);
             this.panel4.Location = new System.Drawing.Point(26, 40);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(859, 474);
@@ -218,57 +231,60 @@
             // chart2
             // 
             this.chart2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
+            chartArea23.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea23);
+            legend23.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend23.Name = "Legend1";
+            this.chart2.Legends.Add(legend23);
             this.chart2.Location = new System.Drawing.Point(508, 139);
             this.chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.IsValueShownAsLabel = true;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart2.Series.Add(series3);
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series23.IsValueShownAsLabel = true;
+            series23.Legend = "Legend1";
+            series23.Name = "Series1";
+            this.chart2.Series.Add(series23);
             this.chart2.Size = new System.Drawing.Size(331, 300);
             this.chart2.TabIndex = 2;
             this.chart2.Text = "chart2";
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "Top Product";
-            this.chart2.Titles.Add(title3);
+            title23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title23.Name = "Title1";
+            title23.Text = "Top Product";
+            this.chart2.Titles.Add(title23);
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea24.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea24);
+            legend24.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend24.Name = "Legend1";
+            this.chart1.Legends.Add(legend24);
             this.chart1.Location = new System.Drawing.Point(41, 139);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series24.ChartArea = "ChartArea1";
+            series24.Legend = "Legend1";
+            series24.Name = "Series1";
+            this.chart1.Series.Add(series24);
             this.chart1.Size = new System.Drawing.Size(461, 300);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.Name = "Title1";
-            title4.Text = "Gross Revenue ";
-            this.chart1.Titles.Add(title4);
+            title24.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title24.Name = "Title1";
+            title24.Text = "Gross Revenue ";
+            this.chart1.Titles.Add(title24);
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
-            // panel7
+            // Numberofprofits
             // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(508, 34);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(331, 71);
-            this.panel7.TabIndex = 1;
+            this.Numberofprofits.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Numberofprofits.Controls.Add(this.label9);
+            this.Numberofprofits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.Numberofprofits.Location = new System.Drawing.Point(508, 34);
+            this.Numberofprofits.Name = "Numberofprofits";
+            this.Numberofprofits.Size = new System.Drawing.Size(331, 71);
+            this.Numberofprofits.TabIndex = 1;
+            this.Numberofprofits.Paint += new System.Windows.Forms.PaintEventHandler(this.Numberofprofit);
             // 
             // label9
             // 
@@ -280,22 +296,25 @@
             this.label9.Size = new System.Drawing.Size(120, 19);
             this.label9.TabIndex = 2;
             this.label9.Text = "Number of Profits";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // panel6
+            // NumberofRevenue
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel6.Location = new System.Drawing.Point(219, 34);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(283, 71);
-            this.panel6.TabIndex = 1;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            this.NumberofRevenue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.NumberofRevenue.Controls.Add(this.label8);
+            this.NumberofRevenue.Cursor = System.Windows.Forms.Cursors.Default;
+            this.NumberofRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.NumberofRevenue.Location = new System.Drawing.Point(219, 34);
+            this.NumberofRevenue.Name = "NumberofRevenue";
+            this.NumberofRevenue.Size = new System.Drawing.Size(283, 71);
+            this.NumberofRevenue.TabIndex = 1;
+            this.NumberofRevenue.Paint += new System.Windows.Forms.PaintEventHandler(this.NumberofRevenues);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Help;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(29, 12);
             this.label8.Name = "label8";
@@ -303,22 +322,27 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Number of Revenue";
             // 
-            // panel5
+            // NumberOfoerder
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.Numberoforders);
-            this.panel5.Location = new System.Drawing.Point(41, 34);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(172, 71);
-            this.panel5.TabIndex = 0;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.NumberOfoerder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.NumberOfoerder.AutoScrollMargin = new System.Drawing.Size(500, 500);
+            this.NumberOfoerder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.NumberOfoerder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.NumberOfoerder.Controls.Add(this.Numberoforders);
+            this.NumberOfoerder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(4)));
+            this.NumberOfoerder.Location = new System.Drawing.Point(41, 34);
+            this.NumberOfoerder.Name = "NumberOfoerder";
+            this.NumberOfoerder.Padding = new System.Windows.Forms.Padding(0, 0, 100, 0);
+            this.NumberOfoerder.Size = new System.Drawing.Size(172, 71);
+            this.NumberOfoerder.TabIndex = 0;
+            this.NumberOfoerder.Paint += new System.Windows.Forms.PaintEventHandler(this.NumberOfoerders);
             // 
             // Numberoforders
             // 
             this.Numberoforders.AutoSize = true;
             this.Numberoforders.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Numberoforders.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numberoforders.Location = new System.Drawing.Point(24, 10);
+            this.Numberoforders.Location = new System.Drawing.Point(24, 12);
             this.Numberoforders.Name = "Numberoforders";
             this.Numberoforders.Size = new System.Drawing.Size(124, 19);
             this.Numberoforders.TabIndex = 0;
@@ -330,8 +354,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(933, 574);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.name_user);
             this.Cursor = System.Windows.Forms.Cursors.Help;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -342,17 +367,17 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.name_user.ResumeLayout(false);
+            this.name_user.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.Numberofprofits.ResumeLayout(false);
+            this.Numberofprofits.PerformLayout();
+            this.NumberofRevenue.ResumeLayout(false);
+            this.NumberofRevenue.PerformLayout();
+            this.NumberOfoerder.ResumeLayout(false);
+            this.NumberOfoerder.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -368,18 +393,19 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel name_user;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel NumberOfoerder;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel Numberofprofits;
+        private System.Windows.Forms.Panel NumberofRevenue;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Label Numberoforders;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label user_name;
     }
 }

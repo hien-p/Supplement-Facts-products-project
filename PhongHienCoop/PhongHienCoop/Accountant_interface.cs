@@ -7,16 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PhongHienCoop
 {
     public partial class Accountant_interface : Form
     {
-        public Accountant_interface(String admin)
+        public Accountant_interface(String name)
         {
             InitializeComponent();
             this.IsMdiContainer = true; 
-            this.username = admin;
+            this.user_name.Text = name;
         }
 
         private void Accountant_interface_Load(object sender, EventArgs e)
@@ -69,9 +70,13 @@ namespace PhongHienCoop
 
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
+        private void NumberOfoerders(object sender, PaintEventArgs e)
         {
-           // public int NumAgents { get; private set: }
+
+            Label lbl = new Label();
+            lbl.Text = "100";
+            lbl.Location = new System.Drawing.Point(67, 32);
+            NumberOfoerder.Controls.Add(lbl);
         }
 
         private void Numberoforders_Click(object sender, EventArgs e)
@@ -79,14 +84,42 @@ namespace PhongHienCoop
 
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
+        private void NumberofRevenues(object sender, PaintEventArgs e)
         {
-
+            Label orders = new Label();
+            orders.Text = "100";
+            orders.Location = new System.Drawing.Point(47, 32);
+            NumberofRevenue.Controls.Add(orders);
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+        
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            //Form frm2 = new Form(this.user_name.text);
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Numberofprofit(object sender, PaintEventArgs e)
+        {
+            Label lbl = new Label();
+            lbl.Text = "100";
+            lbl.Location = new System.Drawing.Point(67, 32);
+            Numberofprofits.Controls.Add(lbl);
         }
     }
 }
