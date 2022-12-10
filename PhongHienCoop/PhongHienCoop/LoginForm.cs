@@ -123,6 +123,17 @@ namespace PhongHienCoop
            
         }
 
+       
+
+
+        public void loaddata()
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
                

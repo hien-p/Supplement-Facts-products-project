@@ -13,8 +13,8 @@ namespace PhongHienCoop.models
         private DateTime startDate;
         private DateTime endDate;
 
-        public Decimal TotalProfit { get; set; }
-        public Decimal TotalRevenue { get; set; }
+        public int TotalProfit { get; set; }
+        public int TotalRevenue { get; set; }
 
         public int Numberoforders { get; set; }
 
@@ -76,11 +76,11 @@ namespace PhongHienCoop.models
                     {
                         while (reader.Read())
                         {
-                            TotalRevenue += (decimal)reader[0];
+                            TotalRevenue += (int)reader[1];
                         }
 
                     }
-                    TotalProfit = TotalRevenue * 0.2m; // 20% 
+                    TotalProfit = TotalRevenue * 2; // 20% 
                     reader.Close();
                 }
 
@@ -118,6 +118,15 @@ namespace PhongHienCoop.models
             }
 
 
+        }
+
+
+        public void loaddata()
+        {
+
+            getnumberorders();
+            getorderanalysis();
+      
         }
 
     }

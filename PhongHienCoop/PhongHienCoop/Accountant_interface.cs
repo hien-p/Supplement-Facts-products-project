@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhongHienCoop.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +14,14 @@ namespace PhongHienCoop
 {
     public partial class Accountant_interface : Form
     {
+        private Dashboard models;
         public Accountant_interface(String name)
         {
             InitializeComponent();
             this.IsMdiContainer = true; 
             this.user_name.Text = name;
+            models = new Dashboard();
+            Loaddata();
         }
 
         private void Accountant_interface_Load(object sender, EventArgs e)
@@ -73,10 +77,7 @@ namespace PhongHienCoop
         private void NumberOfoerders(object sender, PaintEventArgs e)
         {
 
-            Label lbl = new Label();
-            lbl.Text = "100";
-            lbl.Location = new System.Drawing.Point(67, 32);
-            NumberOfoerder.Controls.Add(lbl);
+          
         }
 
         private void Numberoforders_Click(object sender, EventArgs e)
@@ -86,10 +87,7 @@ namespace PhongHienCoop
 
         private void NumberofRevenues(object sender, PaintEventArgs e)
         {
-            Label orders = new Label();
-            orders.Text = "100";
-            orders.Location = new System.Drawing.Point(47, 32);
-            NumberofRevenue.Controls.Add(orders);
+           
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -116,10 +114,30 @@ namespace PhongHienCoop
 
         private void Numberofprofit(object sender, PaintEventArgs e)
         {
-            Label lbl = new Label();
-            lbl.Text = "100";
-            lbl.Location = new System.Drawing.Point(67, 32);
-            Numberofprofits.Controls.Add(lbl);
+            
+        }
+
+        private void Loaddata()
+        {
+            models.loaddata();
+
+
+            // number of order 
+            Label lbl_NumberOfoerders = new Label();
+            lbl_NumberOfoerders.Text = models.Numberoforders.ToString();
+            lbl_NumberOfoerders.Location = new System.Drawing.Point(67, 32);
+            NumberOfoerder.Controls.Add(lbl_NumberOfoerders);
+
+            //  number of Revenue
+            Label Revenue = new Label();
+            Revenue.Text = models.TotalRevenue.ToString();
+            Revenue.Location = new System.Drawing.Point(67, 32);
+            NumberofRevenue.Controls.Add(Revenue);
+
+        }
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
