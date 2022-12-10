@@ -8,71 +8,118 @@ using System.Threading.Tasks;
 
 namespace PhongHienCoop.models
 {
-    public  class Dashboard: dbConnection
+    public class Dashboard : dbConnection
     {
-        private DateTime startDate; 
-        private DateTime endDate;   
-       
+        private DateTime startDate;
+        private DateTime endDate;
+
+        public Decimal TotalProfit { get; set; }
+        public Decimal TotalRevenue { get; set; }
 
         public int Numberoforders { get; set; }
 
-        public int Numberofagents { get; set;  }
+        public int Numberofagents { get; set; }
 
-        public int Numberofproducts {  get; set; }
-        
-        public List<KeyValuePair<String, int>> TopProductsList { get; set; }
+        public int Numberofproducts { get; set; }
+
+        public List<KeyValuePair<int, int>> TopProductsList { get; set; }
 
 
         // private methods
-        private int getnumberorders()
+        private void getnumberorders()
         {
-          
-
             using (var connection = GetSqlConnection())
             {
-                //int orders = 0;
-
-                
-
-
                 connection.Open();
-                using(var command = new SqlCommand())
+                using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
 
                     // query orders 
                     String order_query = "select count(*) as order_id  from Orders";
                     command.CommandText = order_query;
-                    Numberoforders = Convert.ToInt32(command.ExecuteScalar());
+                    Numberoforders = (int)command.ExecuteScalar();
 
                     // query products 
                     String Product_query = "select count(*) as order_id  from Products";
                     command.CommandText = Product_query;
-                    Numberofproducts = Convert.ToInt32(command.ExecuteScalar());
+                    Numberofproducts = (int)command.ExecuteScalar();
 
 
                     // query agents 
                     String Agents_query = "select count(*) as order_id  from Agents";
                     command.CommandText = Agents_query;
-                    Numberofagents = Convert.ToInt32(command.ExecuteScalar());
+                    Numberofagents = (int)command.ExecuteScalar();
 
                 }
-                
-               
-              
-                var rows_affected = cmd.ExecuteReader();
-                /*if (rows_affected.HasRows)
-                {
-                    while (rows_affected.Read())
-                    {
-                        orders = rows_affected.GetInt32(0);
-                                         
-                    }
-                }*/
-
-                return orders;
             }
-    
+
+        }
+
+        private void getorderanalysis()
+        {
+            TotalProfit = 0;
+            TotalRevenue = 0;
+
+            using (var connection = GetSqlConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = @"select agent_id, sum(price) 
+                                            from [Orders] group by agent_id";
+
+                    var reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            TotalRevenue += (decimal)reader[0];
+                        }
+
+                    }
+                    TotalProfit = TotalRevenue * 0.2m; // 20% 
+                    reader.Close();
+                }
+
+
+            }
+        }
+
+        private void Top5product()
+        {
+            using (var connection = GetSqlConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = @" select product_id, sum(quantity) 
+                                        from [Orders] group by product_id order by product_id desc";
+
+                    var reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            // TotalRevenue += (decimal)reader[0];
+                            TopProductsList.Add(new KeyValuePair<int, int>((int)reader[0], (int)reader[1]));
+                        }
+
+                    }
+
+                    reader.Close();
+                }
+
+
+            }
+
+
+        }
+
     }
 
 }

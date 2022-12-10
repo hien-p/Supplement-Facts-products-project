@@ -111,8 +111,8 @@ namespace PhongHienCoop
                    
                 MessageBox.Show("Đăng nhập thành công ");
                
-                //Accountant_interface acc = new Accountant_interface(reader["name"].ToString());
-                //acc.ShowDialog();
+                Accountant_interface acc = new Accountant_interface(reader["name"].ToString());
+                acc.ShowDialog();
                 this.Hide();
                 
             }

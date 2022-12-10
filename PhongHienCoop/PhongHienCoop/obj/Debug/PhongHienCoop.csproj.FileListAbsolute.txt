@@ -57,3 +57,17 @@ E:\DEMO\demo2\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\
 E:\DEMO\demo2\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.exe
 E:\DEMO\demo2\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.pdb
 E:\DEMO\demo2\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.CopyComplete
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.exe.config
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.exe
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.pdb
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.AssemblyReference.cache
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.SuggestedBindingRedirects.cache
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.Accountant_interface.resources
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.LoginForm.resources
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.Products.resources
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.Properties.Resources.resources
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.GenerateResource.cache
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.CoreCompileInputs.cache
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.CopyComplete
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.exe
+E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.pdb
