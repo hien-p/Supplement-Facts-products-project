@@ -21,5 +21,15 @@ namespace PhongHienCoop
         {
 
         }
+
+        private void backtoproduct(object sender, EventArgs e)
+        {
+            this.Close();
+            Products p = new Products();
+            p.StartPosition = FormStartPosition.Manual;
+            p.Left = 250;
+            p.Top = 250;
+            p.ShowDialog();
+        }
     }
 }

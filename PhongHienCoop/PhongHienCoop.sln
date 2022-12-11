@@ -5,16 +5,27 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhongHienCoop", "PhongHienCoop\PhongHienCoop.csproj", "{F6D5CED1-E9DE-426C-99A4-7A27CD792046}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "SuppliersManagements", "SuppliersManagements\SuppliersManagements.aiproj", "{8BA607E6-FF38-4128-B39F-2FE52714A785}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6D5CED1-E9DE-426C-99A4-7A27CD792046}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{F6D5CED1-E9DE-426C-99A4-7A27CD792046}.All|Any CPU.Build.0 = Release|Any CPU
 		{F6D5CED1-E9DE-426C-99A4-7A27CD792046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6D5CED1-E9DE-426C-99A4-7A27CD792046}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6D5CED1-E9DE-426C-99A4-7A27CD792046}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6D5CED1-E9DE-426C-99A4-7A27CD792046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BA607E6-FF38-4128-B39F-2FE52714A785}.All|Any CPU.ActiveCfg = DefaultBuild
+		{8BA607E6-FF38-4128-B39F-2FE52714A785}.All|Any CPU.Build.0 = DefaultBuild
+		{8BA607E6-FF38-4128-B39F-2FE52714A785}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{8BA607E6-FF38-4128-B39F-2FE52714A785}.Debug|Any CPU.Build.0 = DefaultBuild
+		{8BA607E6-FF38-4128-B39F-2FE52714A785}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{8BA607E6-FF38-4128-B39F-2FE52714A785}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

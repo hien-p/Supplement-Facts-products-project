@@ -1,0 +1,15 @@
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Release\PhongHienCoop.exe.config
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Release\PhongHienCoop.exe
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Release\PhongHienCoop.pdb
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.csproj.AssemblyReference.cache
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.csproj.SuggestedBindingRedirects.cache
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.Accountant_interface.resources
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.create_delivery.resources
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.create_receipts.resources
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.LoginForm.resources
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.Products.resources
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.Properties.Resources.resources
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.csproj.GenerateResource.cache
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.csproj.CoreCompileInputs.cache
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.exe
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Release\PhongHienCoop.pdb

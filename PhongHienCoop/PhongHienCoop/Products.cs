@@ -117,13 +117,22 @@ namespace PhongHienCoop
 
         private void button_delivery_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            create_delivery cd = new create_delivery();
+            cd.StartPosition = FormStartPosition.Manual;
+            cd.Left = 350;
+            cd.Top = 250;
+            cd.ShowDialog();
         }
 
         private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // edit content 
-            
+            //Todo: display details product (images, info) 
+            Product_list.SelectTab("tabPage2");
+            MessageBox.Show(e.RowIndex.ToString());
+
         }
+
+      
     }
 }
