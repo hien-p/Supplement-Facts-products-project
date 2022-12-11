@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace PhongHienCoop
     {
         public string Boxdate{get; set;}
 
-
+        public string code;
         public create_receipts()
         {
             InitializeComponent();
@@ -25,6 +26,15 @@ namespace PhongHienCoop
             name_emp.Text = "Hien";
 
             Total_box.Text = "0";
+
+
+            Random rnd = new Random();
+            int dice = rnd.Next(100, 1000);
+
+            code = dice.ToString();
+            ID_re.Text = code;
+
+            //var list = new List<int> { 1, 2, 3, 4, 5 };
         }
 
         private void create_invoice_Load(object sender, EventArgs e)
@@ -60,83 +70,65 @@ namespace PhongHienCoop
             pr.ShowDialog();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void add_button_Click(object sender, EventArgs e)
         {
 
+            // random ID 
+
+           
+
+
+            String name_agents = agentboxname.Text;
+            String Phone = agentboxphone.Text;
+            String product_name = productbox.Text;
+            int quantity = int.Parse(quantitybox.Text); 
+            int price = int.Parse(pricebox.Text);   
+            int total = quantity * price;
+
+
+            int rowId = dataGridView1.Rows.Add();
+            
+            // Grab the new row!
+            DataGridViewRow row = dataGridView1.Rows[rowId];
+
+            //row.Cells["idDataGridViewTextBoxColumn"].Value = "XYZ";
+            row.Cells["ID"].Value = code;
+            row.Cells["Nameagent"].Value = name_agents;
+            row.Cells["Phone"].Value = Phone;
+            row.Cells["productname"].Value = product_name;
+            row.Cells["quantity"].Value = quantity;
+            row.Cells["price"].Value = price;
+            row.Cells["total"].Value = total;
+            Total_box.Text = total.ToString();
+
+
+
+            //this.Hide();
+            MessageBox.Show("Add SucessFul");
+            Products p = new Products();
+            //ShowDialog();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Cancel_button_Click(object sender, EventArgs e)
         {
+                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+                {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
- 
-        
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label_date_Click(object sender, EventArgs e)
-        {
+                try
+                {
+                    dataGridView1.Rows.RemoveAt(item.Index);
+                }
+                catch (IOException error)
+                {
+                    MessageBox.Show("IOException source:", error.ToString());
+                }
+            }
             
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+          
         }
-
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Total_box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-
-
-
-        /* private void label1_Click(object sender, EventArgs e)
-         {
-
-         }*/
     }
 }

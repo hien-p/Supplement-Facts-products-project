@@ -5,19 +5,38 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PhongHienCoop
 {
     public partial class Products : Form
     {
+        public List<string> lstproductNumber;
+        public DataTable table;
+        public class product_details
+        {
+            public int product_id;
+            public string product_name;
+            public int price; 
+            public int quantity;
+        }
+
+
+
+        public List<Products> results { get; set; } 
+
+        private bool view = false;
+
+
         public Products()
         {
             InitializeComponent();
-               
-     
+            table = new DataTable();
+            
         }
 
        
@@ -58,30 +77,8 @@ namespace PhongHienCoop
 
         public void gridview()
         {
-            bool view = true;
-            if (view == true)
-            {
-                string strCon = @"server=VIP-042\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
-                String query = "select * from Products";
-                var connection = new SqlConnection(strCon);
-                connection.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connection;
-                cmd.CommandText = query;
-                DataTable table = new DataTable();
-                SqlDataAdapter sqldat = new SqlDataAdapter(query, connection);
-                sqldat.Fill(table);
-
-                
-
-            }
-
+            
         }
-
-       
-        
-
-        
 
         private void add_button_Click(object sender, EventArgs e)
         {
@@ -100,19 +97,24 @@ namespace PhongHienCoop
 
         private void views_Click(object sender, EventArgs e)
         {
-            string strCon = @"server=VIP-042\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
-            String query = "  select P.product_id, P.product_name, P.price ,W.quantity from Products P , Warehouse W " +
-                "  where P.product_id = W.product_id";
-            var connection = new SqlConnection(strCon);
-            connection.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = connection;
-            cmd.CommandText = query;
-            DataTable table = new DataTable();
-            SqlDataAdapter sqldat = new SqlDataAdapter(query, connection);
-            sqldat.Fill(table);
+            if (view == false)
+            {
+                string strCon = @"server=VIP-042\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
+                String query = " select P.product_id, P.product_name, P.price ,W.quantity from Products P , Warehouse W " +
+                    "  where P.product_id = W.product_id";
+                var connection = new SqlConnection(strCon);
+                connection.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = query;
 
-            dataGrid.DataSource = table;
+                SqlDataAdapter sqldat = new SqlDataAdapter(query, connection);
+                sqldat.Fill(table);
+
+                dataGrid.DataSource = table;
+
+                view = true;
+            }
         }
 
         private void button_delivery_Click(object sender, EventArgs e)
@@ -135,6 +137,23 @@ namespace PhongHienCoop
 
         private void button_edit_Click(object sender, EventArgs e)
         {
+            product_details pro = new product_details();
+            lstproductNumber = new List<string>();
+
+            List<product_details> prolist = new List<product_details>();
+            foreach (DataRow row in table.Rows)
+            {
+                object[] array = row.ItemArray;
+                lstproductNumber.Append(array[1].ToString());
+                pro.product_id = (int)array[0];
+                pro.product_name = array[1].ToString();
+                pro.price = (int)array[2];
+                pro.quantity = (int)array[3];
+                prolist.Add(pro);
+               
+            }
+            MessageBox.Show(prolist[1].ToString());
+                
 
         }
     }
