@@ -169,7 +169,7 @@
             // button_delivery
             // 
             this.button_delivery.BackColor = System.Drawing.Color.Thistle;
-            this.button_delivery.Location = new System.Drawing.Point(811, 242);
+            this.button_delivery.Location = new System.Drawing.Point(811, 239);
             this.button_delivery.Name = "button_delivery";
             this.button_delivery.Size = new System.Drawing.Size(87, 33);
             this.button_delivery.TabIndex = 10;
@@ -179,7 +179,7 @@
             // 
             // button_delete
             // 
-            this.button_delete.Location = new System.Drawing.Point(811, 188);
+            this.button_delete.Location = new System.Drawing.Point(811, 183);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(87, 35);
             this.button_delete.TabIndex = 9;
@@ -230,7 +230,6 @@
             this.product_search.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.product_search.Size = new System.Drawing.Size(531, 26);
             this.product_search.TabIndex = 4;
-            //this.product_search.TextChanged += new System.EventHandler(this.product_search_TextChanged);
             // 
             // search_product_label
             // 

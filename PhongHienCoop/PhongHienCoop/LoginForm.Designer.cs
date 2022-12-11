@@ -98,7 +98,7 @@ namespace PhongHienCoop
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Controls.Add(this.Name);
             this.groupBox1.Controls.Add(this.btn_login);
             this.groupBox1.Controls.Add(this.txt_name);
