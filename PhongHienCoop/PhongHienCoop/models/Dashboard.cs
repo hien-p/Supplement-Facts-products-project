@@ -41,13 +41,13 @@ namespace PhongHienCoop.models
                     Numberoforders = (int)command.ExecuteScalar();
 
                     // query products 
-                    String Product_query = "select count(*) as order_id  from Products";
+                    String Product_query = " select COUNT(product_id) from Products";
                     command.CommandText = Product_query;
                     Numberofproducts = (int)command.ExecuteScalar();
 
 
                     // query agents 
-                    String Agents_query = "select count(*) as order_id  from Agents";
+                    String Agents_query = "select count(agent_id) as agent_id  from Agents";
                     command.CommandText = Agents_query;
                     Numberofagents = (int)command.ExecuteScalar();
 

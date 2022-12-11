@@ -133,6 +133,9 @@ namespace PhongHienCoop
 
         }
 
-      
+        private void button_edit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

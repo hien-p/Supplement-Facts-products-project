@@ -32,11 +32,11 @@ namespace PhongHienCoop
         {
             this.txt_name = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
-            this.Name = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_login = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,19 +59,6 @@ namespace PhongHienCoop
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(154, 20);
             this.txt_password.TabIndex = 1;
-            // 
-            // Name
-            // 
-            this.Name.AutoSize = true;
-            this.Name.ForeColor = System.Drawing.Color.Cornsilk;
-            this.Name.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Name.Location = new System.Drawing.Point(22, 114);
-            this.Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(55, 13);
-            this.Name.TabIndex = 2;
-            this.Name.Text = "Username";
-            this.Name.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -99,7 +86,7 @@ namespace PhongHienCoop
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox1.Controls.Add(this.Name);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_login);
             this.groupBox1.Controls.Add(this.txt_name);
             this.groupBox1.Controls.Add(this.label2);
@@ -126,6 +113,17 @@ namespace PhongHienCoop
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label1.Location = new System.Drawing.Point(24, 114);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Username";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,7 +133,7 @@ namespace PhongHienCoop
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            //this.Name = "LoginForm";
+            this.Name = "LoginForm";
             this.Text = "Login Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -149,11 +147,12 @@ namespace PhongHienCoop
 
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.TextBox txt_password;
-        private System.Windows.Forms.Label Name;
+       
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

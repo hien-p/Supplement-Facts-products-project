@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.l = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,20 +48,27 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.numberofproduct = new System.Windows.Forms.Label();
+            this.numberofproducts = new System.Windows.Forms.Label();
+            this.numberofagents = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.chart_pie = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Numberofprofits = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.NumberofRevenue = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.NumberOfoerder = new System.Windows.Forms.Panel();
             this.Numberoforders = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel_prod = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.name_user.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_pie)).BeginInit();
             this.Numberofprofits.SuspendLayout();
             this.NumberofRevenue.SuspendLayout();
             this.NumberOfoerder.SuspendLayout();
@@ -112,7 +115,6 @@
             this.numberorders.Size = new System.Drawing.Size(108, 25);
             this.numberorders.TabIndex = 1;
             this.numberorders.Text = "10000000";
-            this.numberorders.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -123,7 +125,6 @@
             this.label2.Size = new System.Drawing.Size(145, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Number of orders ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -170,7 +171,6 @@
             this.name_user.Name = "name_user";
             this.name_user.Size = new System.Drawing.Size(912, 523);
             this.name_user.TabIndex = 0;
-            this.name_user.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button_sign_out
             // 
@@ -206,7 +206,6 @@
             this.user_name.Size = new System.Drawing.Size(51, 24);
             this.user_name.TabIndex = 4;
             this.user_name.Text = "user";
-            this.user_name.Click += new System.EventHandler(this.label10_Click);
             // 
             // label7
             // 
@@ -219,7 +218,6 @@
             this.label7.Size = new System.Drawing.Size(122, 25);
             this.label7.TabIndex = 1;
             this.label7.Text = "Welcome, ";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -230,7 +228,6 @@
             this.label6.Size = new System.Drawing.Size(18, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "|";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -242,13 +239,12 @@
             this.label5.Size = new System.Drawing.Size(153, 25);
             this.label5.TabIndex = 0;
             this.label5.Text = "DASHBOARD";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Tomato;
-            this.panel4.Controls.Add(this.chart2);
-            this.panel4.Controls.Add(this.chart1);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.chart_pie);
             this.panel4.Controls.Add(this.Numberofprofits);
             this.panel4.Controls.Add(this.NumberofRevenue);
             this.panel4.Controls.Add(this.NumberOfoerder);
@@ -256,59 +252,104 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(859, 471);
             this.panel4.TabIndex = 0;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // chart2
+            // panel3
             // 
-            this.chart2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
-            this.chart2.Location = new System.Drawing.Point(508, 139);
-            this.chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.IsValueShownAsLabel = true;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(331, 300);
-            this.chart2.TabIndex = 2;
-            this.chart2.Text = "chart2";
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "Top Product";
-            this.chart2.Titles.Add(title3);
-            this.chart2.Click += new System.EventHandler(this.chart2_Click);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.AutoScrollMargin = new System.Drawing.Size(500, 500);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.panel_prod);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.numberofproduct);
+            this.panel3.Controls.Add(this.numberofproducts);
+            this.panel3.Controls.Add(this.numberofagents);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(4)));
+            this.panel3.Location = new System.Drawing.Point(22, 187);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 100, 0);
+            this.panel3.Size = new System.Drawing.Size(166, 205);
+            this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // chart1
+            // numberofproduct
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
-            this.chart1.Location = new System.Drawing.Point(41, 139);
-            this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(461, 300);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.Name = "Title1";
-            title4.Text = "Gross Revenue ";
-            this.chart1.Titles.Add(title4);
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            this.numberofproduct.AutoSize = true;
+            this.numberofproduct.Location = new System.Drawing.Point(42, 139);
+            this.numberofproduct.Name = "numberofproduct";
+            this.numberofproduct.Size = new System.Drawing.Size(0, 25);
+            this.numberofproduct.TabIndex = 4;
+            this.numberofproduct.Click += new System.EventHandler(this.numberofproduct_Click);
+            // 
+            // numberofproducts
+            // 
+            this.numberofproducts.AutoSize = true;
+            this.numberofproducts.Location = new System.Drawing.Point(36, 158);
+            this.numberofproducts.Name = "numberofproducts";
+            this.numberofproducts.Size = new System.Drawing.Size(0, 25);
+            this.numberofproducts.TabIndex = 3;
+            // 
+            // numberofagents
+            // 
+            this.numberofagents.AutoSize = true;
+            this.numberofagents.Location = new System.Drawing.Point(36, 54);
+            this.numberofagents.Name = "numberofagents";
+            this.numberofagents.Size = new System.Drawing.Size(0, 25);
+            this.numberofagents.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label11.Location = new System.Drawing.Point(13, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(146, 22);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Number of Agents";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label10.Location = new System.Drawing.Point(3, 102);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(161, 22);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Number of Products";
+            // 
+            // chart_pie
+            // 
+            this.chart_pie.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea1.Name = "ChartArea1";
+            this.chart_pie.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.Name = "Legend1";
+            this.chart_pie.Legends.Add(legend1);
+            this.chart_pie.Location = new System.Drawing.Point(215, 111);
+            this.chart_pie.Name = "chart_pie";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart_pie.Series.Add(series1);
+            this.chart_pie.Size = new System.Drawing.Size(614, 314);
+            this.chart_pie.TabIndex = 2;
+            this.chart_pie.Text = "chart_pie";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Top Product";
+            this.chart_pie.Titles.Add(title1);
+            this.chart_pie.Click += new System.EventHandler(this.chart2_Click);
             // 
             // Numberofprofits
             // 
-            this.Numberofprofits.BackColor = System.Drawing.Color.Snow;
+            this.Numberofprofits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Numberofprofits.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Numberofprofits.Controls.Add(this.label9);
             this.Numberofprofits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
@@ -316,7 +357,6 @@
             this.Numberofprofits.Name = "Numberofprofits";
             this.Numberofprofits.Size = new System.Drawing.Size(331, 71);
             this.Numberofprofits.TabIndex = 1;
-            this.Numberofprofits.Paint += new System.Windows.Forms.PaintEventHandler(this.Numberofprofit);
             // 
             // label9
             // 
@@ -328,20 +368,19 @@
             this.label9.Size = new System.Drawing.Size(120, 19);
             this.label9.TabIndex = 2;
             this.label9.Text = "Number of Profits";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // NumberofRevenue
             // 
-            this.NumberofRevenue.BackColor = System.Drawing.Color.Snow;
+            this.NumberofRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.NumberofRevenue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.NumberofRevenue.Controls.Add(this.label8);
             this.NumberofRevenue.Cursor = System.Windows.Forms.Cursors.Default;
-            this.NumberofRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.NumberofRevenue.Location = new System.Drawing.Point(219, 34);
+            this.NumberofRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Bold);
+            this.NumberofRevenue.Location = new System.Drawing.Point(204, 34);
             this.NumberofRevenue.Name = "NumberofRevenue";
             this.NumberofRevenue.Size = new System.Drawing.Size(283, 71);
             this.NumberofRevenue.TabIndex = 1;
-            this.NumberofRevenue.Paint += new System.Windows.Forms.PaintEventHandler(this.NumberofRevenues);
+            this.NumberofRevenue.Paint += new System.Windows.Forms.PaintEventHandler(this.NumberofRevenue_Paint);
             // 
             // label8
             // 
@@ -354,23 +393,21 @@
             this.label8.Size = new System.Drawing.Size(137, 19);
             this.label8.TabIndex = 1;
             this.label8.Text = "Number of Revenue";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // NumberOfoerder
             // 
             this.NumberOfoerder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.NumberOfoerder.AutoScrollMargin = new System.Drawing.Size(500, 500);
-            this.NumberOfoerder.BackColor = System.Drawing.Color.Snow;
+            this.NumberOfoerder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.NumberOfoerder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.NumberOfoerder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.NumberOfoerder.Controls.Add(this.Numberoforders);
-            this.NumberOfoerder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(4)));
-            this.NumberOfoerder.Location = new System.Drawing.Point(41, 31);
+            this.NumberOfoerder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(4)));
+            this.NumberOfoerder.Location = new System.Drawing.Point(22, 34);
             this.NumberOfoerder.Name = "NumberOfoerder";
             this.NumberOfoerder.Padding = new System.Windows.Forms.Padding(0, 0, 100, 0);
-            this.NumberOfoerder.Size = new System.Drawing.Size(172, 71);
+            this.NumberOfoerder.Size = new System.Drawing.Size(176, 71);
             this.NumberOfoerder.TabIndex = 0;
-            this.NumberOfoerder.Paint += new System.Windows.Forms.PaintEventHandler(this.NumberOfoerders);
             // 
             // Numberoforders
             // 
@@ -382,7 +419,24 @@
             this.Numberoforders.Size = new System.Drawing.Size(124, 19);
             this.Numberoforders.TabIndex = 0;
             this.Numberoforders.Text = "Number of Orders";
-            this.Numberoforders.Click += new System.EventHandler(this.Numberoforders_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(4)));
+            this.panel5.Location = new System.Drawing.Point(24, 46);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(135, 45);
+            this.panel5.TabIndex = 5;
+            // 
+            // panel_prod
+            // 
+            this.panel_prod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Bold);
+            this.panel_prod.Location = new System.Drawing.Point(24, 139);
+            this.panel_prod.Name = "panel_prod";
+            this.panel_prod.Size = new System.Drawing.Size(140, 44);
+            this.panel_prod.TabIndex = 6;
+            this.panel_prod.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_prod_Paint);
             // 
             // Accountant_interface
             // 
@@ -397,7 +451,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Accountant_interface";
             this.Text = "Accountant_interface";
-            this.Load += new System.EventHandler(this.Accountant_interface_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -405,8 +458,9 @@
             this.name_user.ResumeLayout(false);
             this.name_user.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_pie)).EndInit();
             this.Numberofprofits.ResumeLayout(false);
             this.Numberofprofits.PerformLayout();
             this.NumberofRevenue.ResumeLayout(false);
@@ -434,15 +488,22 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel NumberOfoerder;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Panel Numberofprofits;
         private System.Windows.Forms.Panel NumberofRevenue;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_pie;
         private System.Windows.Forms.Label Numberoforders;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label user_name;
         private System.Windows.Forms.Button button_sign_out;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label numberofproducts;
+        private System.Windows.Forms.Label numberofagents;
+        private System.Windows.Forms.Label numberofproduct;
+        private System.Windows.Forms.Panel panel_prod;
+        private System.Windows.Forms.Panel panel5;
     }
 }

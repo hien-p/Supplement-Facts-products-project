@@ -23,6 +23,9 @@ namespace PhongHienCoop
             this.user_name.Text = name;
             models = new Dashboard();
             Loaddata();
+
+            chart_pie.Titles.Add("Hi");
+
         }
 
         public Accountant_interface()
@@ -32,103 +35,11 @@ namespace PhongHienCoop
             models = new Dashboard();
             Loaddata();
         }
-        private void Accountant_interface_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void ToolStripMenuItemInventory_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PaneBoard_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NumberOfoerders(object sender, PaintEventArgs e)
-        {
-
-          
-        }
-
-        private void Numberoforders_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NumberofRevenues(object sender, PaintEventArgs e)
-        {
-           
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
         
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-            //Form frm2 = new Form(this.user_name.text);
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Numberofprofit(object sender, PaintEventArgs e)
-        {
-            
-        }
 
         private void Loaddata()
         {
             models.loaddata();
-
 
             // number of order 
             Label lbl_NumberOfoerders = new Label();
@@ -149,6 +60,22 @@ namespace PhongHienCoop
             Revenue.Size = new System.Drawing.Size(297, 31);
             NumberofRevenue.Controls.Add(Revenue);
 
+
+            Label pro2 = new Label();
+            pro2.Text = models.Numberofagents.ToString();
+            pro2.Location = new System.Drawing.Point(47, 12);
+            panel5.Controls.Add(pro2);
+
+            Label pro = new Label();
+            pro.Text = models.Numberofproducts.ToString();
+            pro.Location = new System.Drawing.Point(47, 12);
+
+            panel_prod.Controls.Add(pro);
+
+
+
+            // top products 
+            // model.GrossRevenuelist
         }
         private void chart2_Click(object sender, EventArgs e)
         {
@@ -191,7 +118,27 @@ namespace PhongHienCoop
             pro.ShowDialog();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void numberofproduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NumberofRevenue_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_prod_Paint(object sender, PaintEventArgs e)
         {
 
         }

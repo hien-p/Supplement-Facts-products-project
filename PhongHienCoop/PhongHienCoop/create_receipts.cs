@@ -19,6 +19,12 @@ namespace PhongHienCoop
         public create_receipts()
         {
             InitializeComponent();
+
+            DateTime today = DateTime.Today;
+            label_date.Text = today.ToString("dd/MM/yyyy");
+            name_emp.Text = "Hien";
+
+            Total_box.Text = "0";
         }
 
         private void create_invoice_Load(object sender, EventArgs e)
@@ -73,6 +79,51 @@ namespace PhongHienCoop
  
         
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label_date_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Total_box_TextChanged(object sender, EventArgs e)
         {
 
         }
