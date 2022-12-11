@@ -13,7 +13,7 @@ namespace PhongHienCoop.db
 
         public dbConnection()
         {
-            connectionString = @"server=VIP-077\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
+            connectionString = @"server=VIP-042\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
         }
 
         protected SqlConnection GetSqlConnection()

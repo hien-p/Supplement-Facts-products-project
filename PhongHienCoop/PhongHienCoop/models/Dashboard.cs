@@ -79,7 +79,7 @@ namespace PhongHienCoop.models
                         }
 
                     }
-                    TotalProfit = TotalRevenue * 2; // 20% 
+                    TotalProfit = TotalRevenue * 2;  
                     reader.Close();
                 }
 

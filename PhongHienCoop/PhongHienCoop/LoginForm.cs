@@ -72,7 +72,7 @@ namespace PhongHienCoop
 
 
     
-            string strCon = @"server=VIP-077\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
+            string strCon = @"server=VIP-042\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
             SqlParameter[] arrParam = new SqlParameter[2];
 
             arrParam[0] = new SqlParameter("accountant_name", account);

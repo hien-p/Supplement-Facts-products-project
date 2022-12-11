@@ -41,7 +41,6 @@ E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\
 E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\PhongHienCoop.pdb
 E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.exe
 E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.pdb
-E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
 E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.CopyComplete
 E:\DEMO\demo2\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.AssemblyReference.cache
 E:\DEMO\demo2\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.csproj.SuggestedBindingRedirects.cache
@@ -73,3 +72,5 @@ E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\
 E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.pdb
 E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_delivery.resources
 E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_receipts.resources
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_delivery.resources
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_receipts.resources

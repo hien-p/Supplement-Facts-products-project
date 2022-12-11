@@ -47,6 +47,7 @@
             this.panel_tab.Name = "panel_tab";
             this.panel_tab.Size = new System.Drawing.Size(801, 48);
             this.panel_tab.TabIndex = 0;
+            this.panel_tab.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_tab_Paint);
             // 
             // button2
             // 
@@ -57,6 +58,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Back to Dashboard";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.backtodashboard);
             // 
             // button1
             // 
@@ -67,6 +69,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Product list";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button_products);
             // 
             // Recieved_Note
             // 

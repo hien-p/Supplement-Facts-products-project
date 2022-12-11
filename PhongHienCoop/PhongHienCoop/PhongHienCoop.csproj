@@ -71,6 +71,7 @@
     <Compile Include="Dbconnection .cs" />
     <Compile Include="db\dbConnection.cs" />
     <Compile Include="models\Dashboard.cs" />
+    <Compile Include="models\Product_list.cs" />
     <Compile Include="Products.cs">
       <SubType>Form</SubType>
     </Compile>

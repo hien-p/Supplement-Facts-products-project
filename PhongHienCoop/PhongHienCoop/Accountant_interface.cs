@@ -25,6 +25,13 @@ namespace PhongHienCoop
             Loaddata();
         }
 
+        public Accountant_interface()
+        {
+            InitializeComponent();
+            this.IsMdiContainer = true;
+            models = new Dashboard();
+            Loaddata();
+        }
         private void Accountant_interface_Load(object sender, EventArgs e)
         {
            
@@ -155,7 +162,7 @@ namespace PhongHienCoop
             if (dialogResult == DialogResult.No)
             {
                 this.Hide();
-                Accountant_interface acc = new Accountant_interface("Hien");
+                Accountant_interface acc = new Accountant_interface();
                 acc.ShowDialog();
             }
             else
@@ -164,6 +171,9 @@ namespace PhongHienCoop
                 
                 this.Hide();
                 LoginForm acc = new LoginForm();
+                acc.StartPosition = FormStartPosition.Manual;
+                acc.Left = 100;
+                acc.Top = 100;
                 acc.ShowDialog();
             }
 
@@ -172,7 +182,13 @@ namespace PhongHienCoop
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // 
+            this.Hide();
+            Products pro = new Products();
+            pro.StartPosition = FormStartPosition.Manual;
+            pro.Left = 250;
+            pro.Top = 250;
+            pro.ShowDialog();
         }
 
         private void label8_Click(object sender, EventArgs e)
