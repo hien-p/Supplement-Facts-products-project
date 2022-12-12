@@ -78,7 +78,7 @@ namespace PhongHienCoop
            
 
 
-            String name_agents = agentboxname.Text;
+           // String name_agents = agentboxname.Text;
             String Phone = agentboxphone.Text;
             String product_name = productbox.Text;
             int quantity = int.Parse(quantitybox.Text); 
@@ -93,7 +93,7 @@ namespace PhongHienCoop
 
             //row.Cells["idDataGridViewTextBoxColumn"].Value = "XYZ";
             row.Cells["ID"].Value = code;
-            row.Cells["Nameagent"].Value = name_agents;
+            //row.Cells["Nameagent"].Value = name_agents;
             row.Cells["Phone"].Value = Phone;
             row.Cells["productname"].Value = product_name;
             row.Cells["quantity"].Value = quantity;

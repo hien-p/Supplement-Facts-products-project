@@ -49,6 +49,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_prod = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.numberofproduct = new System.Windows.Forms.Label();
             this.numberofproducts = new System.Windows.Forms.Label();
             this.numberofagents = new System.Windows.Forms.Label();
@@ -61,8 +63,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.NumberOfoerder = new System.Windows.Forms.Panel();
             this.Numberoforders = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel_prod = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.name_user.SuspendLayout();
@@ -171,6 +171,7 @@
             this.name_user.Name = "name_user";
             this.name_user.Size = new System.Drawing.Size(912, 523);
             this.name_user.TabIndex = 0;
+            this.name_user.Paint += new System.Windows.Forms.PaintEventHandler(this.name_user_Paint);
             // 
             // button_sign_out
             // 
@@ -274,6 +275,24 @@
             this.panel3.Size = new System.Drawing.Size(166, 205);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel_prod
+            // 
+            this.panel_prod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Bold);
+            this.panel_prod.Location = new System.Drawing.Point(24, 139);
+            this.panel_prod.Name = "panel_prod";
+            this.panel_prod.Size = new System.Drawing.Size(140, 44);
+            this.panel_prod.TabIndex = 6;
+            this.panel_prod.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_prod_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(4)));
+            this.panel5.Location = new System.Drawing.Point(24, 46);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(135, 45);
+            this.panel5.TabIndex = 5;
             // 
             // numberofproduct
             // 
@@ -419,24 +438,6 @@
             this.Numberoforders.Size = new System.Drawing.Size(124, 19);
             this.Numberoforders.TabIndex = 0;
             this.Numberoforders.Text = "Number of Orders";
-            // 
-            // panel5
-            // 
-            this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(4)));
-            this.panel5.Location = new System.Drawing.Point(24, 46);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(135, 45);
-            this.panel5.TabIndex = 5;
-            // 
-            // panel_prod
-            // 
-            this.panel_prod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Bold);
-            this.panel_prod.Location = new System.Drawing.Point(24, 139);
-            this.panel_prod.Name = "panel_prod";
-            this.panel_prod.Size = new System.Drawing.Size(140, 44);
-            this.panel_prod.TabIndex = 6;
-            this.panel_prod.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_prod_Paint);
             // 
             // Accountant_interface
             // 

@@ -99,7 +99,7 @@ namespace PhongHienCoop
         {
             if (view == false)
             {
-                string strCon = @"server=VIP-042\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
+                string strCon = @"server=VIP-045\SQLEXPRESS;database=PhongHienCoop;integrated security=true;";
                 String query = " select P.product_id, P.product_name, P.price ,W.quantity from Products P , Warehouse W " +
                     "  where P.product_id = W.product_id";
                 var connection = new SqlConnection(strCon);
@@ -152,8 +152,13 @@ namespace PhongHienCoop
                 prolist.Add(pro);
                
             }
-            MessageBox.Show(prolist[1].ToString());
+            //MessageBox.Show(prolist[1].ToString());
                 
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
 
         }
     }

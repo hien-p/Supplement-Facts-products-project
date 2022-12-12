@@ -21,7 +21,7 @@ namespace PhongHienCoop
             //Application.Run(new Accountant_interface("Hien"));
             //Application.Run(new Products());
             //Application.Run(new Accountant_interface());
-            Application.Run(new create_receipts());
+            Application.Run(new create_delivery());
             
 
         }

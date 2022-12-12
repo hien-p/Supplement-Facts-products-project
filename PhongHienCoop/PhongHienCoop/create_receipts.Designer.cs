@@ -34,8 +34,6 @@
             this.Recieved_Note = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label_date = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.agentboxname = new System.Windows.Forms.TextBox();
             this.agentboxphone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.productbox = new System.Windows.Forms.TextBox();
@@ -130,26 +128,9 @@
             this.label_date.Size = new System.Drawing.Size(2, 24);
             this.label_date.TabIndex = 3;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label1.Location = new System.Drawing.Point(31, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 18);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Agents Name";
-            // 
-            // agentboxname
-            // 
-            this.agentboxname.Location = new System.Drawing.Point(134, 126);
-            this.agentboxname.Name = "agentboxname";
-            this.agentboxname.Size = new System.Drawing.Size(256, 20);
-            this.agentboxname.TabIndex = 5;
-            // 
             // agentboxphone
             // 
-            this.agentboxphone.Location = new System.Drawing.Point(134, 172);
+            this.agentboxphone.Location = new System.Drawing.Point(147, 129);
             this.agentboxphone.Name = "agentboxphone";
             this.agentboxphone.Size = new System.Drawing.Size(256, 20);
             this.agentboxphone.TabIndex = 7;
@@ -158,11 +139,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(31, 174);
+            this.label3.Location = new System.Drawing.Point(44, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 18);
+            this.label3.Size = new System.Drawing.Size(51, 18);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Agents Phone";
+            this.label3.Text = "Phone";
             // 
             // productbox
             // 
@@ -382,8 +363,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.agentboxphone);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.agentboxname);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label_date);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel_tab);
@@ -406,8 +385,6 @@
         private System.Windows.Forms.Label label2;
        
         private System.Windows.Forms.Label label_date;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox agentboxname;
         private System.Windows.Forms.TextBox agentboxphone;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox productbox;

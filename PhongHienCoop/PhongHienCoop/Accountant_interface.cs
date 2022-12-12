@@ -24,7 +24,7 @@ namespace PhongHienCoop
             models = new Dashboard();
             Loaddata();
 
-            chart_pie.Titles.Add("Hi");
+            //chart_pie.Titles.Add("Hi");
 
         }
 
@@ -139,6 +139,11 @@ namespace PhongHienCoop
         }
 
         private void panel_prod_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void name_user_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -10,8 +10,7 @@ namespace PhongHienCoop.models
 {
     public class Dashboard : dbConnection
     {
-        private DateTime startDate;
-        private DateTime endDate;
+        
 
         public long TotalProfit { get; set; }
         public long TotalRevenue { get; set; }

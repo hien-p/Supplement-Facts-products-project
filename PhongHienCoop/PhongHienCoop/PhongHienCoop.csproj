@@ -130,5 +130,11 @@
   <ItemGroup>
     <None Include="Resources\images.jfif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image_printing.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %287%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
