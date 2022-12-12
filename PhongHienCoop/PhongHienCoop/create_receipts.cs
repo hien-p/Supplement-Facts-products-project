@@ -89,44 +89,7 @@ namespace PhongHienCoop
 
         private void add_button_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
-
-
-            String product_name = productbox.Text;
-            int quantity = int.Parse(quantitybox.Text);
-            int price = int.Parse(pricebox.Text);
-            int total = quantity * price;
-
-
-            int rowId = dataGridView1.Rows.Add();
-
-            // Grab the new row!
-            DataGridViewRow row = dataGridView1.Rows[rowId];
-
-            //row.Cells["idDataGridViewTextBoxColumn"].Value = "XYZ";
-            row.Cells["ID"].Value = code;
-            //row.Cells["Nameagent"].Value = name_agents;
-            row.Cells["productname"].Value = product_name;
-            row.Cells["quantity"].Value = quantity;
-            row.Cells["price"].Value = price;
-            row.Cells["total"].Value = total;
-            Total_box.Text = total.ToString();
-
-
-
-            //this.Hide();
-            MessageBox.Show("Add SucessFul");
-            Products p = new Products();
-            //ShowDialog();
-
-
-
-
+            
         }
 
         private void Cancel_button_Click(object sender, EventArgs e)
@@ -175,9 +138,13 @@ namespace PhongHienCoop
                 row.Cells["total"].Value = total;
                 Total_box.Text = total.ToString();
 
-                //this.Hide();
+                
                 MessageBox.Show("Add SucessFul");
             }
         }
+
+
+
+
     }
 }
