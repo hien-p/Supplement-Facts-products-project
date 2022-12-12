@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\PhongHienCoop.csproj": {}
+    "D:\\FinalSE\\Supplement-Facts-products-project\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\PhongHienCoop.csproj": {}
   },
   "projects": {
-    "D:\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\PhongHienCoop.csproj": {
+    "D:\\FinalSE\\Supplement-Facts-products-project\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\PhongHienCoop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\PhongHienCoop.csproj",
+        "projectUniqueName": "D:\\FinalSE\\Supplement-Facts-products-project\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\PhongHienCoop.csproj",
         "projectName": "PhongHienCoop",
-        "projectPath": "D:\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\PhongHienCoop.csproj",
+        "projectPath": "D:\\FinalSE\\Supplement-Facts-products-project\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\PhongHienCoop.csproj",
         "packagesPath": "C:\\Users\\PhongLapLanhAnhSao\\.nuget\\packages\\",
-        "outputPath": "D:\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\obj\\",
+        "outputPath": "D:\\FinalSE\\Supplement-Facts-products-project\\FinalSE_Web\\PhongHienCoop\\PhongHienCoop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PhongLapLanhAnhSao\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,26 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Caching.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
