@@ -78,7 +78,7 @@ namespace PhongHienCoop
 
            
             
-            pro4.Text = String.Format(info, "{0:c}", models.TotalProfit);
+            
             
             
             pro4.Location = new System.Drawing.Point(67, 32);

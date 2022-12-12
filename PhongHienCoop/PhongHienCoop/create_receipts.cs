@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhongHienCoop.db;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +15,15 @@ namespace PhongHienCoop
 {
     public partial class create_receipts : Form
     {
-        public string Boxdate{get; set;}
+
+
+
+        public string Boxdate { get; set; }
 
         public string code;
+
+        public List<string> myList;
+
         public create_receipts()
         {
             InitializeComponent();
@@ -31,10 +38,20 @@ namespace PhongHienCoop
             Random rnd = new Random();
             int dice = rnd.Next(100, 1000);
 
+
             code = dice.ToString();
             ID_re.Text = code;
 
-            //var list = new List<int> { 1, 2, 3, 4, 5 };
+           
+
+
+            this.dataGridView1.DataSource = null;
+
+            this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void create_invoice_Load(object sender, EventArgs e)
@@ -73,28 +90,27 @@ namespace PhongHienCoop
         private void add_button_Click(object sender, EventArgs e)
         {
 
-            // random ID 
-
-           
 
 
-           // String name_agents = agentboxname.Text;
-            String Phone = agentboxphone.Text;
+
+
+
+
+
             String product_name = productbox.Text;
-            int quantity = int.Parse(quantitybox.Text); 
-            int price = int.Parse(pricebox.Text);   
+            int quantity = int.Parse(quantitybox.Text);
+            int price = int.Parse(pricebox.Text);
             int total = quantity * price;
 
 
             int rowId = dataGridView1.Rows.Add();
-            
+
             // Grab the new row!
             DataGridViewRow row = dataGridView1.Rows[rowId];
 
             //row.Cells["idDataGridViewTextBoxColumn"].Value = "XYZ";
             row.Cells["ID"].Value = code;
             //row.Cells["Nameagent"].Value = name_agents;
-            row.Cells["Phone"].Value = Phone;
             row.Cells["productname"].Value = product_name;
             row.Cells["quantity"].Value = quantity;
             row.Cells["price"].Value = price;
@@ -107,12 +123,16 @@ namespace PhongHienCoop
             MessageBox.Show("Add SucessFul");
             Products p = new Products();
             //ShowDialog();
+
+
+
+
         }
 
         private void Cancel_button_Click(object sender, EventArgs e)
         {
-                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
-                {
+            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            {
 
                 try
                 {
@@ -123,12 +143,41 @@ namespace PhongHienCoop
                     MessageBox.Show("IOException source:", error.ToString());
                 }
             }
-            
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
           
+        }
+
+        private void pricebox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                String product_name = productbox.Text;
+                int quantity = int.Parse(quantitybox.Text);
+                int price = int.Parse(pricebox.Text);
+                int total = quantity * price;
+
+
+                int rowId = dataGridView1.Rows.Add();
+
+                // Grab the new row!
+                DataGridViewRow row = dataGridView1.Rows[rowId];
+
+                //row.Cells["idDataGridViewTextBoxColumn"].Value = "XYZ";
+                row.Cells["ID"].Value = code;
+                //row.Cells["Nameagent"].Value = name_agents;
+                row.Cells["productname"].Value = product_name;
+                row.Cells["quantity"].Value = quantity;
+                row.Cells["price"].Value = price;
+                row.Cells["total"].Value = total;
+                Total_box.Text = total.ToString();
+
+                //this.Hide();
+                MessageBox.Show("Add SucessFul");
+            }
         }
     }
 }

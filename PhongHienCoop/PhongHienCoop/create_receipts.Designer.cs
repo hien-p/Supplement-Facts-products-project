@@ -34,8 +34,6 @@
             this.Recieved_Note = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label_date = new System.Windows.Forms.Label();
-            this.agentboxphone = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.productbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.quantitybox = new System.Windows.Forms.TextBox();
@@ -52,8 +50,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nameagent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,26 +124,9 @@
             this.label_date.Size = new System.Drawing.Size(2, 24);
             this.label_date.TabIndex = 3;
             // 
-            // agentboxphone
-            // 
-            this.agentboxphone.Location = new System.Drawing.Point(147, 129);
-            this.agentboxphone.Name = "agentboxphone";
-            this.agentboxphone.Size = new System.Drawing.Size(256, 20);
-            this.agentboxphone.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(44, 131);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 18);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Phone";
-            // 
             // productbox
             // 
-            this.productbox.Location = new System.Drawing.Point(519, 126);
+            this.productbox.Location = new System.Drawing.Point(125, 111);
             this.productbox.Multiline = true;
             this.productbox.Name = "productbox";
             this.productbox.Size = new System.Drawing.Size(256, 20);
@@ -157,7 +136,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(409, 128);
+            this.label4.Location = new System.Drawing.Point(15, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 18);
             this.label4.TabIndex = 8;
@@ -165,7 +144,7 @@
             // 
             // quantitybox
             // 
-            this.quantitybox.Location = new System.Drawing.Point(512, 172);
+            this.quantitybox.Location = new System.Drawing.Point(118, 157);
             this.quantitybox.Name = "quantitybox";
             this.quantitybox.Size = new System.Drawing.Size(77, 20);
             this.quantitybox.TabIndex = 11;
@@ -174,7 +153,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label5.Location = new System.Drawing.Point(413, 174);
+            this.label5.Location = new System.Drawing.Point(19, 159);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 18);
             this.label5.TabIndex = 10;
@@ -204,7 +183,7 @@
             // 
             this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.add_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.add_button.Location = new System.Drawing.Point(48, 217);
+            this.add_button.Location = new System.Drawing.Point(416, 167);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(139, 56);
             this.add_button.TabIndex = 14;
@@ -216,7 +195,7 @@
             // 
             this.Cancel_button.BackColor = System.Drawing.Color.IndianRed;
             this.Cancel_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.Cancel_button.Location = new System.Drawing.Point(225, 216);
+            this.Cancel_button.Location = new System.Drawing.Point(619, 167);
             this.Cancel_button.Name = "Cancel_button";
             this.Cancel_button.Size = new System.Drawing.Size(129, 56);
             this.Cancel_button.TabIndex = 15;
@@ -226,7 +205,7 @@
             // 
             // pricebox
             // 
-            this.pricebox.Location = new System.Drawing.Point(671, 172);
+            this.pricebox.Location = new System.Drawing.Point(277, 157);
             this.pricebox.Name = "pricebox";
             this.pricebox.Size = new System.Drawing.Size(77, 20);
             this.pricebox.TabIndex = 17;
@@ -235,7 +214,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(612, 174);
+            this.label6.Location = new System.Drawing.Point(218, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 18);
             this.label6.TabIndex = 16;
@@ -243,7 +222,7 @@
             // 
             // Total_box
             // 
-            this.Total_box.Location = new System.Drawing.Point(512, 217);
+            this.Total_box.Location = new System.Drawing.Point(118, 202);
             this.Total_box.Name = "Total_box";
             this.Total_box.ReadOnly = true;
             this.Total_box.Size = new System.Drawing.Size(77, 20);
@@ -253,7 +232,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label8.Location = new System.Drawing.Point(427, 217);
+            this.label8.Location = new System.Drawing.Point(33, 202);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 20);
             this.label8.TabIndex = 18;
@@ -286,15 +265,13 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Nameagent,
-            this.Phone,
             this.productname,
             this.Quantity,
             this.price,
             this.total});
-            this.dataGridView1.Location = new System.Drawing.Point(32, 298);
+            this.dataGridView1.Location = new System.Drawing.Point(32, 256);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(743, 223);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -303,18 +280,6 @@
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
-            // 
-            // Nameagent
-            // 
-            this.Nameagent.DataPropertyName = "Nameagent";
-            this.Nameagent.HeaderText = "Agents name";
-            this.Nameagent.Name = "Nameagent";
-            // 
-            // Phone
-            // 
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.HeaderText = "Phone";
-            this.Phone.Name = "Phone";
             // 
             // productname
             // 
@@ -361,8 +326,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.productbox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.agentboxphone);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label_date);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel_tab);
@@ -385,8 +348,6 @@
         private System.Windows.Forms.Label label2;
        
         private System.Windows.Forms.Label label_date;
-        private System.Windows.Forms.TextBox agentboxphone;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox productbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox quantitybox;
@@ -403,8 +364,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nameagent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn productname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
