@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -215,16 +216,25 @@ namespace PhongHienCoop
 
         private void Print_Click(object sender, EventArgs e)
         {
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+            PrintDialog p = new PrintDialog();
+            p.Document = printDocument1;
+            DialogResult res = p.ShowDialog();
 
+
+            if (res == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+            p.ShowDialog();
+            
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Image iamge = Resources.print;
+            e.Graphics.DrawImage(iamge, 100, 100, iamge.Width, iamge.Height);
+            
 
-            e.Graphics.DrawImage(iamge, 0, 0, iamge.Width, iamge.Height);
         }
     }
 

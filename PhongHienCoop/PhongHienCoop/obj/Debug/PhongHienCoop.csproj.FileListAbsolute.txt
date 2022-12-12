@@ -74,3 +74,5 @@ E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\
 E:\DEMO\demo3\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_receipts.resources
 E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_delivery.resources
 E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\obj\Debug\PhongHienCoop.create_receipts.resources
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\Dapper.dll
+E:\demo\Supplement-Facts-products-project\PhongHienCoop\PhongHienCoop\bin\Debug\Dapper.xml

@@ -24,8 +24,7 @@ namespace PhongHienCoop
             models = new Dashboard();
             Loaddata();
 
-            //chart_pie.Titles.Add("Hi");
-
+         
         }
 
         public Accountant_interface()
@@ -73,8 +72,19 @@ namespace PhongHienCoop
             panel_prod.Controls.Add(pro);
 
 
+            Label pro4 = new Label();
 
-            // top products 
+            var value = 8012.34m;
+
+           
+            
+            pro4.Text = String.Format(info, "{0:c}", models.TotalProfit);
+            
+            
+            pro4.Location = new System.Drawing.Point(67, 32);
+            Numberofprofits_box.Controls.Add(pro4);
+
+
             // model.GrossRevenuelist
         }
         private void chart2_Click(object sender, EventArgs e)
@@ -146,6 +156,11 @@ namespace PhongHienCoop
         private void name_user_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Numberofprofits_Paint(object sender, PaintEventArgs e)
+        {
+                
         }
     }
 }

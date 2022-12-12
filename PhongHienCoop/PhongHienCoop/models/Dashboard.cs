@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PhongHienCoop.models
 {
@@ -12,7 +13,7 @@ namespace PhongHienCoop.models
     {
         
 
-        public long TotalProfit { get; set; }
+        public String TotalProfit { get; set; }
         public long TotalRevenue { get; set; }
 
         public int Numberoforders { get; set; }
@@ -57,9 +58,9 @@ namespace PhongHienCoop.models
 
         private void getorderanalysis()
         {
-            TotalProfit = 0;
+            
             TotalRevenue = 0;
-
+            
             using (var connection = GetSqlConnection())
             {
                 connection.Open();
@@ -67,6 +68,7 @@ namespace PhongHienCoop.models
                 {
                     command.Connection = connection;
                     command.CommandText = @"select product_id, SUM(CAST(price AS BIGINT)) * SUM(CAST(quantity AS BIGINT)) as revenue from [Orders] group by product_id order by product_id desc";
+
 
                     var reader = command.ExecuteReader();
 
@@ -78,10 +80,24 @@ namespace PhongHienCoop.models
                         }
 
                     }
-                    TotalProfit = TotalRevenue * 2;  
                     reader.Close();
                 }
 
+                using (var command2 = new SqlCommand())
+                {
+                    command2.Connection = connection;
+                    command2.CommandText = @"select sum(g.quantity*(w.price_out - w.price_in)) as profit  from Warehouse w, GoodsDeliveryNote g  where w.product_id = g.products_id";
+                   
+                    var reader = command2.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        TotalProfit = reader[0].ToString();
+                        break;
+                    }
+
+
+                }
 
             }
         }

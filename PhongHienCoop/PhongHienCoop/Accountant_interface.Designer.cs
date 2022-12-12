@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.l = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,7 +57,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.chart_pie = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Numberofprofits = new System.Windows.Forms.Panel();
+            this.Numberofprofits_box = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.NumberofRevenue = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_pie)).BeginInit();
-            this.Numberofprofits.SuspendLayout();
+            this.Numberofprofits_box.SuspendLayout();
             this.NumberofRevenue.SuspendLayout();
             this.NumberOfoerder.SuspendLayout();
             this.SuspendLayout();
@@ -246,7 +246,7 @@
             this.panel4.BackColor = System.Drawing.Color.Tomato;
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.chart_pie);
-            this.panel4.Controls.Add(this.Numberofprofits);
+            this.panel4.Controls.Add(this.Numberofprofits_box);
             this.panel4.Controls.Add(this.NumberofRevenue);
             this.panel4.Controls.Add(this.NumberOfoerder);
             this.panel4.Location = new System.Drawing.Point(26, 43);
@@ -344,38 +344,39 @@
             // chart_pie
             // 
             this.chart_pie.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea1.Name = "ChartArea1";
-            this.chart_pie.ChartAreas.Add(chartArea1);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.Name = "Legend1";
-            this.chart_pie.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart_pie.ChartAreas.Add(chartArea2);
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.Name = "Legend1";
+            this.chart_pie.Legends.Add(legend2);
             this.chart_pie.Location = new System.Drawing.Point(215, 111);
             this.chart_pie.Name = "chart_pie";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart_pie.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart_pie.Series.Add(series2);
             this.chart_pie.Size = new System.Drawing.Size(614, 314);
             this.chart_pie.TabIndex = 2;
             this.chart_pie.Text = "chart_pie";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "Top Product";
-            this.chart_pie.Titles.Add(title1);
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "Top Product";
+            this.chart_pie.Titles.Add(title2);
             this.chart_pie.Click += new System.EventHandler(this.chart2_Click);
             // 
-            // Numberofprofits
+            // Numberofprofits_box
             // 
-            this.Numberofprofits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Numberofprofits.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Numberofprofits.Controls.Add(this.label9);
-            this.Numberofprofits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.Numberofprofits.Location = new System.Drawing.Point(508, 34);
-            this.Numberofprofits.Name = "Numberofprofits";
-            this.Numberofprofits.Size = new System.Drawing.Size(331, 71);
-            this.Numberofprofits.TabIndex = 1;
+            this.Numberofprofits_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Numberofprofits_box.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Numberofprofits_box.Controls.Add(this.label9);
+            this.Numberofprofits_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.Numberofprofits_box.Location = new System.Drawing.Point(508, 34);
+            this.Numberofprofits_box.Name = "Numberofprofits_box";
+            this.Numberofprofits_box.Size = new System.Drawing.Size(331, 71);
+            this.Numberofprofits_box.TabIndex = 1;
+            this.Numberofprofits_box.Paint += new System.Windows.Forms.PaintEventHandler(this.Numberofprofits_Paint);
             // 
             // label9
             // 
@@ -462,8 +463,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_pie)).EndInit();
-            this.Numberofprofits.ResumeLayout(false);
-            this.Numberofprofits.PerformLayout();
+            this.Numberofprofits_box.ResumeLayout(false);
+            this.Numberofprofits_box.PerformLayout();
             this.NumberofRevenue.ResumeLayout(false);
             this.NumberofRevenue.PerformLayout();
             this.NumberOfoerder.ResumeLayout(false);
@@ -489,7 +490,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel NumberOfoerder;
-        private System.Windows.Forms.Panel Numberofprofits;
         private System.Windows.Forms.Panel NumberofRevenue;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_pie;
         private System.Windows.Forms.Label Numberoforders;
@@ -506,5 +506,6 @@
         private System.Windows.Forms.Label numberofproduct;
         private System.Windows.Forms.Panel panel_prod;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel Numberofprofits_box;
     }
 }
