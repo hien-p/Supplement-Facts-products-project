@@ -12,7 +12,6 @@ namespace PhongHienCoop.models
     public class Dashboard : dbConnection
     {
         
-
         public String TotalProfit { get; set; }
         public long TotalRevenue { get; set; }
 

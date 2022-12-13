@@ -20,6 +20,8 @@ namespace PhongHienCoop
 
         public string Boxdate { get; set; }
 
+        public DateTime today;
+
         public string code;
 
         public List<string> myList;
@@ -28,7 +30,7 @@ namespace PhongHienCoop
         {
             InitializeComponent();
 
-            DateTime today = DateTime.Today;
+            today = DateTime.Today;
             label_date.Text = today.ToString("dd/MM/yyyy");
             name_emp.Text = "Hien";
 
@@ -52,6 +54,7 @@ namespace PhongHienCoop
             this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
         }
 
         private void create_invoice_Load(object sender, EventArgs e)
@@ -61,7 +64,7 @@ namespace PhongHienCoop
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void panel_tab_Paint(object sender, PaintEventArgs e)
@@ -114,6 +117,8 @@ namespace PhongHienCoop
           
         }
 
+        
+
         private void pricebox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode==Keys.Enter)
@@ -138,13 +143,15 @@ namespace PhongHienCoop
                 row.Cells["total"].Value = total;
                 Total_box.Text = total.ToString();
 
-                
+                // table 
+
                 MessageBox.Show("Add SucessFul");
             }
         }
 
+        private void ID_re_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

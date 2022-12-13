@@ -5,40 +5,41 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PhongHienCoop
 build_property.RootNamespace = PhongHienCoop
-build_property.ProjectDir = D:\FinalSE\Supplement-Facts-products-project\FinalSE_Web\PhongHienCoop\PhongHienCoop\
+build_property.ProjectDir = E:\DEMO\Supplement-Facts-products-project\FinalSE_Web\PhongHienCoop\PhongHienCoop\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\FinalSE\Supplement-Facts-products-project\FinalSE_Web\PhongHienCoop\PhongHienCoop
+build_property.MSBuildProjectDirectory = E:\DEMO\Supplement-Facts-products-project\FinalSE_Web\PhongHienCoop\PhongHienCoop
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/FinalSE/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Home/Index.cshtml]
+[E:/DEMO/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalSE/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Home/Privacy.cshtml]
+[E:/DEMO/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalSE/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Shared/Error.cshtml]
+[E:/DEMO/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalSE/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/DEMO/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalSE/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/_ViewImports.cshtml]
+[E:/DEMO/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalSE/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/_ViewStart.cshtml]
+[E:/DEMO/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FinalSE/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Shared/_Layout.cshtml]
+[E:/DEMO/Supplement-Facts-products-project/FinalSE_Web/PhongHienCoop/PhongHienCoop/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-k6hb9b8hxu

@@ -183,7 +183,7 @@
             // 
             this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.add_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.add_button.Location = new System.Drawing.Point(416, 167);
+            this.add_button.Location = new System.Drawing.Point(444, 166);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(139, 56);
             this.add_button.TabIndex = 14;
@@ -247,6 +247,7 @@
             this.ID_re.Name = "ID_re";
             this.ID_re.Size = new System.Drawing.Size(2, 24);
             this.ID_re.TabIndex = 21;
+            this.ID_re.Click += new System.EventHandler(this.ID_re_Click);
             // 
             // label10
             // 
@@ -271,7 +272,7 @@
             this.total});
             this.dataGridView1.Location = new System.Drawing.Point(32, 256);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(716, 223);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

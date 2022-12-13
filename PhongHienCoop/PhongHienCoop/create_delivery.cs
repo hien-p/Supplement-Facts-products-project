@@ -27,55 +27,43 @@ namespace PhongHienCoop
         public String agent_id { get; set; }
 
         public String agent_tel { get; set; }
-        public String price { get; set; }
+
+       
+
+        // call 
+        public String Product_name {get; set; }
+        public String Agent_name { get; set; }
+        public string Agent_tel { get; set; }
+        //public String price { get; set; }
         public String quanity { get; set; }
 
 
+        public string code_delivery { get; set; }
         public create_delivery()
         {
             InitializeComponent();
-            
-
-            /*this.Controls.Add(dataGridView1);
-            dataGridView1.ColumnCount = 5;
-            dataGridView1.Columns[0].Name = "Release Date";
-            dataGridView1.Columns[1].Name = "Track";
-            *//* dataGridView1.Columns[1].DefaultCellStyle.Alignment =
-                 DataGridViewContentAlignment.MiddleCenter;*//*
-            dataGridView1.Columns[2].Name = "Title";
-            dataGridView1.Columns[3].Name = "Artist";
-            dataGridView1.Columns[4].Name = "Album";
-
-
-
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.MultiSelect = true;
-
-            dataGridView1.BackgroundColor = Color.Honeydew;*/
-
+           
             this.IsMdiContainer = true;
             productss = new Product_list();
             loaddata();
             DataTable table = productss.orders();
             dataGridView1.DataSource = table;
-            dataGridView1.MultiSelect = true;
+
+
+            //this.ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.quantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //this.quanity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill   
+
+
+           
         }
 
 
         private void loaddata()
         {
-            productss.loaddata();
-
-            
-
-
-          /*  foreach (Dictionary<string, string> column in productss.rows)
-            {
-                //MessageBox.Show(column["order_id"]);
-                DateTime myDate = DateTime.Parse(column["order_date"]);
-                MessageBox.Show(myDate.ToString("MM/dd/yyyy"));
-            }*/
-
+            productss.loaddata();            
         }
 
 
@@ -92,17 +80,7 @@ namespace PhongHienCoop
 
 
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*int index = e.RowIndex;
-
-
-            DataTable data = new DataTable();
-            DataGridViewRow selectrow = dataGridView1.Rows[index];
-
-            this.ProductID = selectrow.Cells[0].Value.ToString();
-            MessageBox.Show(ProductID);*/
-        }
+       
 
         private void button1_Click(object sender, DataGridViewCellEventArgs e)
         {
@@ -126,10 +104,11 @@ namespace PhongHienCoop
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // dataGridView2
+            
         }
 
-       
+
 
         private void datagridkeydown(object sender, KeyEventArgs e)
         {
@@ -141,42 +120,47 @@ namespace PhongHienCoop
                 order_id = selectrow.Cells[0].Value.ToString();
                 date = selectrow.Cells[1].Value.ToString();
                 produc_id = selectrow.Cells[2].Value.ToString();
-                agent_id = selectrow.Cells[3].Value.ToString();
+               // agent_id = selectrow.Cells[3].Value.ToString();
                 agent_tel = selectrow.Cells[4].Value.ToString();
-                price = selectrow.Cells[5].Value.ToString();
+               // price = selectrow.Cells[5].Value.ToString();
                 quanity = selectrow.Cells[6].Value.ToString();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            dataGridView2.Rows.Clear();
-            dataGridView2.Refresh();
-            ordertab.SelectTab("tabPage2");
-            /* MessageBox.Show(produc_id);*/
+            int index = dataGridView1.CurrentRow.Index;
+            dataGridView1.Rows[index].Selected = true;
+            //MessageBox.Show(index.ToString());
+            //MessageBox.Show(dataGridView1.SelectedCells[0].Value.ToString());
+            DataGridViewRow row = dataGridView1.Rows[index];//Store the value of the current row in a variable
             
-            dataGridView2.ColumnCount = 5;
-            dataGridView2.Columns[0].Name = "Order ID";
-            dataGridView2.Columns[1].Name = "Product ID";
-            dataGridView2.Columns[2].Name = "Agent ID ";
-            dataGridView2.Columns[3].Name = "Agent Phone ";
-            dataGridView2.Columns[4].Name = "Price";
 
-            var index = this.dataGridView2.Rows.Add();
-            this.dataGridView2.Rows[index].Cells[0].Value = order_id;
-            this.dataGridView2.Rows[index].Cells[1].Value = produc_id; 
-
-            // agentid -> agentname 
-            this.dataGridView2.Rows[index].Cells[2].Value = agent_id;
-            this.dataGridView2.Rows[index].Cells[3].Value = agent_tel;
+            // order_id
+            order_id = row.Cells[0].Value.ToString();
+            date = row.Cells[1].Value.ToString();
 
 
-            //price
-            this.dataGridView2.Rows[index].Cells[4].Value = price;
+            // Get information 
+            produc_id = row.Cells[2].Value.ToString();
+            agent_id = row.Cells[3].Value.ToString();
+            agent_tel = row.Cells[4].Value.ToString();
+            
+            // int 
+           // price = row.Cells[5].Value.ToString();
+            quanity = row.Cells[6].Value.ToString();
 
-            int total = Int32.Parse(quanity) * Int32.Parse(price);
-            totalbox.Text = total.ToString();
+
+            ordertab.SelectTab("details_print");
+
+            Random rnd = new Random();
+            int dice = rnd.Next(100, 1000);
+
+
+            code_delivery = dice.ToString();
+            ID_delivery.Text = code_delivery;
+
+
         }
 
         private void totalbox_TextChanged(object sender, EventArgs e)
@@ -186,7 +170,7 @@ namespace PhongHienCoop
 
         private void dateTime_ValueChanged(object sender, EventArgs e)
         {
-            date = dateTime.Value.ToString("dd-MM-yyyy");
+           // date = dateTime.Value.ToString("dd-MM-yyyy");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -235,6 +219,21 @@ namespace PhongHienCoop
             e.Graphics.DrawImage(iamge, 100, 100, iamge.Width, iamge.Height);
             
 
+        }
+
+        private void Agent_phone_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ID_delivery_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 
