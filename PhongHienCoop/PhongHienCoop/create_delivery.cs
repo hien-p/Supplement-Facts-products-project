@@ -54,10 +54,11 @@ namespace PhongHienCoop
             this.Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.quantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.total.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             //this.quanity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill   
 
 
-           
+
         }
 
 

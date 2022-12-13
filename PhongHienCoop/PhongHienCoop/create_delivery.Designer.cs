@@ -38,25 +38,23 @@
             this.ordertab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.details_print = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_delivery = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Date_box = new System.Windows.Forms.TextBox();
             this.Agent_phone_box = new System.Windows.Forms.TextBox();
             this.agent_name_box = new System.Windows.Forms.TextBox();
             this.Print = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.totalbox = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.ordertab.SuspendLayout();
@@ -164,8 +162,6 @@
             this.details_print.Controls.Add(this.Agent_phone_box);
             this.details_print.Controls.Add(this.agent_name_box);
             this.details_print.Controls.Add(this.Print);
-            this.details_print.Controls.Add(this.label2);
-            this.details_print.Controls.Add(this.totalbox);
             this.details_print.Location = new System.Drawing.Point(4, 22);
             this.details_print.Name = "details_print";
             this.details_print.Padding = new System.Windows.Forms.Padding(3);
@@ -174,6 +170,27 @@
             this.details_print.Text = "Details";
             this.details_print.UseVisualStyleBackColor = true;
             this.details_print.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label3.Location = new System.Drawing.Point(441, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 20);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Payment Status ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "paid",
+            "unpaid"});
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(445, 98);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(231, 21);
+            this.comboBox1.TabIndex = 48;
             // 
             // dataGridView2
             // 
@@ -189,6 +206,35 @@
             this.dataGridView2.Size = new System.Drawing.Size(678, 174);
             this.dataGridView2.TabIndex = 47;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_1);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID_product";
+            this.ID.Name = "ID";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Column1";
+            this.Column1.HeaderText = "Product Name";
+            this.Column1.Name = "Column1";
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "quantity";
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "price";
+            this.Column2.Name = "Column2";
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
             // 
             // ID_delivery
             // 
@@ -246,26 +292,6 @@
             this.Print.UseVisualStyleBackColor = false;
             this.Print.Click += new System.EventHandler(this.Print_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(588, 344);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "Total ";
-            // 
-            // totalbox
-            // 
-            this.totalbox.BackColor = System.Drawing.Color.AliceBlue;
-            this.totalbox.Location = new System.Drawing.Point(639, 344);
-            this.totalbox.Name = "totalbox";
-            this.totalbox.ReadOnly = true;
-            this.totalbox.Size = new System.Drawing.Size(97, 20);
-            this.totalbox.TabIndex = 37;
-            this.totalbox.TextChanged += new System.EventHandler(this.totalbox_TextChanged);
-            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -283,56 +309,6 @@
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID_product";
-            this.ID.Name = "ID";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Column1";
-            this.Column1.HeaderText = "Product Name";
-            this.Column1.Name = "Column1";
-            // 
-            // quantity
-            // 
-            this.quantity.DataPropertyName = "quantity";
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "price";
-            this.Column2.Name = "Column2";
-            // 
-            // total
-            // 
-            this.total.DataPropertyName = "total";
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
-            "paid",
-            "unpaid"});
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(445, 98);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(231, 21);
-            this.comboBox1.TabIndex = 48;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label3.Location = new System.Drawing.Point(441, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 20);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Payment Status ";
             // 
             // create_delivery
             // 
@@ -368,8 +344,6 @@
         private System.Windows.Forms.TabControl ordertab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage details_print;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox totalbox;
         private System.Windows.Forms.Button Print;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
