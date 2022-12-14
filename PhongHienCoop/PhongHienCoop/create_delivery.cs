@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace PhongHienCoop
 {
     public partial class create_delivery : Form
     {
+        
 
         private Product_list productss;
 
@@ -36,7 +38,7 @@ namespace PhongHienCoop
         public string Agent_tel { get; set; }
         //public String price { get; set; }
         public String quanity { get; set; }
-
+        public String price_grid {  get; set; }
 
         public string code_delivery { get; set; }
         public create_delivery()
@@ -150,7 +152,7 @@ namespace PhongHienCoop
             // int 
            // price = row.Cells[5].Value.ToString();
             quanity = row.Cells[6].Value.ToString();
-
+            price_grid = row.Cells[5].Value.ToString();
 
             ordertab.SelectTab("details_print");
 
@@ -160,6 +162,37 @@ namespace PhongHienCoop
 
             code_delivery = dice.ToString();
             ID_delivery.Text = code_delivery;
+
+            DateTime today = DateTime.Today;
+            Date_box.Text = today.ToString("dd/MM/yyyy");
+
+
+            // agents name 
+            DataTable data_agent = productss.info_name_agent(agent_id);
+            object field_agent = data_agent.Rows[0][1];
+            agent_name_box.Text = field_agent.ToString();
+
+
+            // 
+
+            DataGridViewRow rowss = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+            rowss.Cells[0].Value = produc_id;
+
+            // product name 
+            DataTable data = productss.info_name(produc_id);
+            object field = data.Rows[0][1];
+            rowss.Cells[1].Value = field.ToString();
+            //
+            rowss.Cells[2].Value = quanity;
+            rowss.Cells[3].Value = price_grid;
+
+            Int64 total_grid = Int64.Parse(quanity) * Int64.Parse(price_grid);
+            rowss.Cells[4].Value = total_grid.ToString();
+
+            Agent_phone_box.Text = agent_tel;
+            dataGridView2.Rows.Add(rowss);
+            
+           
 
 
         }
@@ -235,6 +268,26 @@ namespace PhongHienCoop
         private void ID_delivery_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void Date_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agent_name_box_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

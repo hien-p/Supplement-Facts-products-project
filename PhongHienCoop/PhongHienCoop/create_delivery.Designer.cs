@@ -187,6 +187,9 @@
             "paid",
             "unpaid"});
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "paid \t",
+            "unpaid"});
             this.comboBox1.Location = new System.Drawing.Point(445, 98);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(231, 21);

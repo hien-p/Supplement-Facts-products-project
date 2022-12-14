@@ -1,9 +1,12 @@
 ﻿using PhongHienCoop.db;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,6 +57,8 @@ namespace PhongHienCoop.models
 
         }
 
+
+
         public DataTable orders()
         {
             DataTable data = new DataTable();
@@ -74,6 +79,40 @@ namespace PhongHienCoop.models
                 return data;
         }
 
+
+        public DataTable info_name(String Id)
+        {
+            DataTable data2 = new DataTable();
+            using (var connection = GetSqlConnection())
+            {
+                connection.Open();
+                string bookDetails = String.Format("select * from Products where Products.product_id = {0}", Id);
+                SqlDataAdapter da = new SqlDataAdapter(bookDetails, connection);
+                da.Fill(data2);
+                
+            }
+            
+            return data2;
+        
+        
+        }
+
+        public DataTable info_name_agent(String Id)
+        {
+            DataTable data2 = new DataTable();
+            using (var connection = GetSqlConnection())
+            {
+                connection.Open();
+                string bookDetails = String.Format("select * from Agents  where Agents.agent_id = {0}", Id);
+                SqlDataAdapter da = new SqlDataAdapter(bookDetails, connection);
+                da.Fill(data2);
+
+            }
+
+            return data2;
+
+
+        }
 
         public void loaddata()
         {
