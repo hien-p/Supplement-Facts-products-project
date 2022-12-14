@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
 
 namespace PhongHienCoop
@@ -23,8 +24,29 @@ namespace PhongHienCoop
             this.user_name.Text = name;
             models = new Dashboard();
             Loaddata();
+            string seriesname = "s1";
+            //chart_pie.Series.Add(seriesname);
+            //set the chart-type to "Pie"
+
+            DataTable data = models.Top5product();
+            object field_product_top1 = data.Rows[0][0];
+            object field_product_top_1quan = data.Rows[0][2];
+
+            object field_product_top2 = data.Rows[1][0];
+            object field_product_top_2quan = data.Rows[1][2];
+
+            object field_product_top3 = data.Rows[2][0];
+            object field_product_top_3quan = data.Rows[2][2];
+
+            chart_pie.Series[seriesname].ChartType = SeriesChartType.Pie;
+
+            //Add some datapoints so the series. in this case you can pass the values to this method
+            chart_pie.Series[seriesname].Points.AddXY(field_product_top1.ToString(), field_product_top_1quan);
+            chart_pie.Series[seriesname].Points.AddXY(field_product_top2.ToString(), field_product_top_2quan);
+            chart_pie.Series[seriesname].Points.AddXY(field_product_top3.ToString(), field_product_top_3quan);
 
          
+           
         }
 
         public Accountant_interface()
@@ -33,6 +55,10 @@ namespace PhongHienCoop
             this.IsMdiContainer = true;
             models = new Dashboard();
             Loaddata();
+
+            
+
+
         }
         
 
